@@ -1,4 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="cryto_tracking.action_server">
+      <field name="name">cryto_tracking server</field>
+      <field name="model_id" ref="model_cryto_tracking_cryto_tracking"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+    <record id="crypto_tracking_tree" model="ir.ui.view">
+        <field name="name">crypto_tracking.tree</field>
+        <field name="model">crypto_tracking.crypto_tracking</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="exchange_id" />
+                <field name="symbol_id" />
+                <field name="tracking_date" />
+                <field name="lastPrice" />
+                <field name="lowestAsk" />
+                <field name="highestBid" />
+                <field name="percentChange" />
+                <field name="baseVolume" />
+                <field name="quoteVolume" />
+                <field name="isFrozen" />
+                <field name="high24hr" />
+                <field name="low24hr" />
+                <field name="change" />
+                <field name="prevClose" />
+                <field name="prevOpen" />
+                <field name="name" />
+                <field name="exchange_name" />
+            </tree>
+        </field>
+    </record>
 
+    <record id="crypto_tracking_form" model="ir.ui.view">
+        <field name="name">crypto_tracking.form</field>
+        <field name="model">crypto_tracking.crypto_tracking</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="exchange_id" />
+                        <field name="symbol_id" />
+                        <field name="tracking_date" />
+                        <field name="lastPrice" />
+                        <field name="lowestAsk" />
+                        <field name="highestBid" />
+                        <field name="percentChange" />
+                        <field name="baseVolume" />
+                        <field name="quoteVolume" />
+                        <field name="isFrozen" />
+                        <field name="high24hr" />
+                        <field name="low24hr" />
+                        <field name="change" />
+                        <field name="prevClose" />
+                        <field name="prevOpen" />
+                        <field name="name" />
+                        <field name="exchange_name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="crypto_tracking_calendar" model="ir.ui.view">
+        <field name="name">crypto_tracking.calendar</field>
+        <field name="model">crypto_tracking.crypto_tracking</field>
+        <field name="arch" type="xml">
+            <calendar string="" date_start="tracking_date" color="" mode="month">
+                <field name="exchange_id" />
+                <field name="symbol_id" />
+                <field name="tracking_date" />
+                <field name="lastPrice" />
+                <field name="lowestAsk" />
+                <field name="highestBid" />
+                <field name="percentChange" />
+                <field name="baseVolume" />
+                <field name="quoteVolume" />
+                <field name="isFrozen" />
+                <field name="high24hr" />
+                <field name="low24hr" />
+                <field name="change" />
+                <field name="prevClose" />
+                <field name="prevOpen" />
+                <field name="name" />
+                <field name="exchange_name" />
+            </calendar>
+        </field>
+    </record>
+
+    <record id="crypto_tracking_view_kanban" model="ir.ui.view">
+        <field name="name">crypto_tracking.view.kanban</field>
+        <field name="model">crypto_tracking.crypto_tracking</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 </odoo>

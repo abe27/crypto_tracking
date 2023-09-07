@@ -3,9 +3,9 @@
 from odoo import models, fields, api
 
 
-# class cryto_tracking(models.Model):
-#     _name = 'cryto_tracking.cryto_tracking'
-#     _description = 'cryto_tracking.cryto_tracking'
+# class crypto_tracking(models.Model):
+#     _name = 'crypto_tracking.crypto_tracking'
+#     _description = 'crypto_tracking.crypto_tracking'
 
 #     name = fields.Char()
 #     value = fields.Integer()
@@ -18,7 +18,7 @@ from odoo import models, fields, api
 #             record.value2 = float(record.value) / 100
 
 class exchange_list(models.Model):
-    _name = 'cryto_tracking.exchange_list'
+    _name = 'crypto_tracking.exchange_list'
     _description = 'รายชื่อ Exchange'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
@@ -31,7 +31,7 @@ class exchange_list(models.Model):
     is_active = fields.Boolean(string="Is Active", default=False, tracking=True)
 
 class symbol_group(models.Model):
-    _name = 'cryto_tracking.symbol_group'
+    _name = 'crypto_tracking.symbol_group'
     _description = 'ประเภท'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
@@ -40,24 +40,24 @@ class symbol_group(models.Model):
     is_active = fields.Boolean(string="Is Active", default=False, tracking=True)
 
 class symbol_list(models.Model):
-    _name = 'cryto_tracking.symbol_list'
+    _name = 'crypto_tracking.symbol_list'
     _description = 'รายการ Symbol'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    symbol_group_id = fields.Many2one('cryto_tracking.symbol_group', string="Symbol Group", tracking=True)
+    symbol_group_id = fields.Many2one('crypto_tracking.symbol_group', string="Symbol Group", tracking=True)
     name = fields.Char(size=150, string="Symbol Name", required=True, tracking=True)
     description = fields.Text(string="Description", tracking=True)
     symbol_logo = fields.Image(string="Logo", tracking=True)
     is_active = fields.Boolean(string="Is Active", default=False, tracking=True)
 
 
-class cryto_tracking(models.Model):
-    _name = 'cryto_tracking.cryto_tracking'
+class crypto_tracking(models.Model):
+    _name = 'crypto_tracking.crypto_tracking'
     _description = 'ข้อมูลรายการ Tracking'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    exchange_id = fields.Many2one('cryto_tracking.exchange_list', string="Exchange Name", required=True, tracking=True)
-    symbol_id = fields.Many2one('cryto_tracking.symbol_list', string="Symbol Name", required=True, tracking=True)
+    exchange_id = fields.Many2one('crypto_tracking.exchange_list', string="Exchange Name", required=True, tracking=True)
+    symbol_id = fields.Many2one('crypto_tracking.symbol_list', string="Symbol Name", required=True, tracking=True)
     tracking_date = fields.Datetime(string="Tracking At", default=lambda self: fields.Date.today(), tracking=True)
     lastPrice = fields.Float(string="last price", required=True, tracking=True)# "last": 913303,
     lowestAsk = fields.Float(string="lowestAsk", default="0.0", tracking=True)# "lowestAsk": 913839.79,
