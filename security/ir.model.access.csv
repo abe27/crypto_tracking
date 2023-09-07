@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cryto_tracking_exchange_list,cryto_tracking.exchange_list,model_cryto_tracking_exchange_list,base.group_user,1,1,1,1
+access_cryto_tracking_symbol_group,cryto_tracking.symbol_group,model_cryto_tracking_symbol_group,base.group_user,1,1,1,1
+access_cryto_tracking_symbol_list,cryto_tracking.symbol_list,model_cryto_tracking_symbol_list,base.group_user,1,1,1,1
 access_cryto_tracking_cryto_tracking,cryto_tracking.cryto_tracking,model_cryto_tracking_cryto_tracking,base.group_user,1,1,1,1
