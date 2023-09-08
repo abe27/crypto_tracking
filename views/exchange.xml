@@ -44,7 +44,9 @@
             <kanban>
                 <templates>
                     <t t-name="kanban-box">
-                        <field name="exchange_logo" widget="image" class="oe_avatar"/>
+                        <div class="oe_kanban_global_click">
+                            <field name="exchange_logo" widget="image" class="oe_avatar"/>
+                        </div>
                     </t>
                 </templates>
             </kanban>

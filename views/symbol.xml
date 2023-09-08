@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="symbol_list_view_tree" model="ir.ui.view">
+        <field name="name">symbol_list.view.tree</field>
+        <field name="model">crypto_tracking.symbol_list</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="symbol_group_id" />
+                <field name="name" />
+                <field name="description" />
+                <field name="symbol_logo" />
+                <field name="is_withdraw_only" widget="boolean_toggle" />
+                <field name="is_active" widget="switch"/>
+            </tree>
+        </field>
+    </record>
 
-    
+    <record id="symbol_list_view_form" model="ir.ui.view">
+        <field name="name">symbol_list.view.form</field>
+        <field name="model">crypto_tracking.symbol_list</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <field name="symbol_logo" widget="image" class="oe_avatar"/>
+                    <group>
+                        <field name="symbol_group_id" />
+                        <field name="name" />
+                        <field name="description" />
+                        <field name="is_withdraw_only" widget="boolean_toggle" />
+                        <field name="is_active" widget="switch"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
 
+    <record id="symbol_list_view_kanban" model="ir.ui.view">
+        <field name="name">symbol_list.view.kanban</field>
+        <field name="model">crypto_tracking.symbol_list</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="card oe_kanban_global_click" style="width:400px">
+                            <field name="symbol_logo" widget="image" class="card-img-top" />
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <field name="name" class="text-primary" />
+                                </h4>
+                                <p class="card-text">
+                                    <field name="symbol_group_id" />
+                                </p>
+                                <p class="card-text">
+                                    <field name="description" class="text-success" />
+                                </p>
+                                <p class="card-text">
+                                    <field name="is_withdraw_only" widget="boolean_toggle" class="text-success"/>
+                                </p>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 </odoo>

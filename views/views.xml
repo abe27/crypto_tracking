@@ -22,7 +22,7 @@
          <record model="ir.actions.act_window" id="symbol_list_action">
             <field name="name">ข้อมูลรายชื่อเหรียญ</field>
             <field name="res_model">crypto_tracking.symbol_list</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
         </record>
 
         <record model="ir.actions.act_window" id="currency_pair_action">

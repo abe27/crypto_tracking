@@ -69,6 +69,11 @@
                         <field name="exchange_name" />
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+                </div>
             </form>
         </field>
     </record>
@@ -91,7 +96,7 @@
             <kanban>
                 <templates>
                     <t t-name="kanban-box">
-
+                        <div class=""></div>
                     </t>
                 </templates>
             </kanban>
