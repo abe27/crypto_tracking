@@ -3,15 +3,1276 @@
     <data noupdate="1">
         <!-- ดึงข้อมูล Reference -->
         <record id="dep_ps" model="crypto_tracking.symbol_group">
-            <field name="name">Unknow</field>
+            <field name="name">Store of Value</field>
         </record>
         <record model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="dep_ps" />
-            <field name="name">THB</field>
-            <field name="description">Thai Bath</field>
-            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/thai.png"/>
+            <field name="name">BTC</field>
+            <field name="description">Bitcoin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/btc.png"/>
             <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ETH</field>
+            <field name="description">Ethereum</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/eth.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">KUB</field>
+            <field name="description">Bitkub Coin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/kub.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">XRP</field>
+            <field name="description">Ripple</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/xrp.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">BCH</field>
+            <field name="description">Bitcoin Cash</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/bch.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">USDT</field>
+            <field name="description">Tether</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/usdt.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">BNB</field>
+            <field name="description">BNB Smart Chain</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/bnb.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">XLM</field>
+            <field name="description">Stellar</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/xlm.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ADA</field>
+            <field name="description">Cardano</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ada.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">WAN</field>
+            <field name="description">Wancoin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/wan.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">OMG</field>
+            <field name="description">OMG Network</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/omg.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ZIL</field>
+            <field name="description">Zilliqa</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/zil.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SNT</field>
+            <field name="description">Status</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/snt.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">CVC</field>
+            <field name="description">Civic</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/cvc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">LINK</field>
+            <field name="description">Chainlink</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/link.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">IOST</field>
+            <field name="description">IOST</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/iost.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ZRX</field>
+            <field name="description">0x</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/zrx.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">KNC</field>
+            <field name="description">Kyber Network</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/knc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ABT</field>
+            <field name="description">Arcblock</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/abt.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">MANA</field>
+            <field name="description">Decentraland</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/mana.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SIX</field>
+            <field name="description">SIX</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/six.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">JFIN</field>
+            <field name="description">JFIN Coin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/jfin.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">POW</field>
+            <field name="description">Powerledger</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/pow.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">DOGE</field>
+            <field name="description">Dogecoin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/doge.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">DAI</field>
+            <field name="description">Dai</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/dai.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">False</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">USDC</field>
+            <field name="description">USD Coin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/usdc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">BAT</field>
+            <field name="description">Basic Attention Token</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/bat.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">MKR</field>
+            <field name="description">Maker</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/mkr.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ENJ</field>
+            <field name="description">Enjin Coin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/enj.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">BAND</field>
+            <field name="description">Band Protocol</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/band.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">COMP</field>
+            <field name="description">Compound</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/comp.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">KSM</field>
+            <field name="description">Kusama</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ksm.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">DOT</field>
+            <field name="description">Polkadot</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/dot.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">NEAR</field>
+            <field name="description">NEAR Protocol</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/near.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SCRT</field>
+            <field name="description">Secret</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/scrt.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">GLM</field>
+            <field name="description">Golem</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/glm.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">YFI</field>
+            <field name="description">yearn.finance</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/yfi.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">UNI</field>
+            <field name="description">Uniswap</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/uni.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">AAVE</field>
+            <field name="description">Aave</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/aave.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ALPHA</field>
+            <field name="description">Stella</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/alpha.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">BAL</field>
+            <field name="description">Balancer</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/bal.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">CRV</field>
+            <field name="description">Curve DAO Token</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/crv.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">AXS</field>
+            <field name="description">Axie Infinity</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/axs.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SAND</field>
+            <field name="description">The Sandbox</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/sand.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SUSHI</field>
+            <field name="description">SushiSwap</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/sushi.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">OCEAN</field>
+            <field name="description">Ocean Protocol</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ocean.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SNX</field>
+            <field name="description">Synthetix</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/snx.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">GALA</field>
+            <field name="description">Gala</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/gala.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">GT</field>
+            <field name="description">GateToken</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/gt.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">GF</field>
+            <field name="description">GuildFi</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/gf.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ILV</field>
+            <field name="description">Illuvium</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ilv.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">IMX</field>
+            <field name="description">Immutable X</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/imx.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ENS</field>
+            <field name="description">Ethereum Name Service</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ens.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">DYDX</field>
+            <field name="description">dYdX</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/dydx.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SOL</field>
+            <field name="description">Solana</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/sol.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">AVAX</field>
+            <field name="description">Avalanche</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/avax.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">LYXE</field>
+            <field name="description">LUKSO</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/lyxe.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">APE</field>
+            <field name="description">ApeCoin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ape.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">LUNC</field>
+            <field name="description">Terra Classic</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/lunc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">MATIC</field>
+            <field name="description">Polygon</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/matic.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">FTM</field>
+            <field name="description">Fantom</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ftm.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">CHZ</field>
+            <field name="description">Chiliz</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/chz.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">CTXC</field>
+            <field name="description">Cortex</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ctxc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">GRT</field>
+            <field name="description">The Graph</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/grt.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">TRX</field>
+            <field name="description">TRON</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/trx.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">HBAR</field>
+            <field name="description">Hedera</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/hbar.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">OP</field>
+            <field name="description">Optimism</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/op.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">GAL</field>
+            <field name="description">Galxe</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/gal.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">XTZ</field>
+            <field name="description">Tezos</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/xtz.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">CELO</field>
+            <field name="description">Celo</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/celo.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">LRC</field>
+            <field name="description">Loopring</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/lrc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">BUSD</field>
+            <field name="description">Binance USD</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/busd.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">1INCH</field>
+            <field name="description">1inch Network</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/1inch.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ATOM</field>
+            <field name="description">Cosmos</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/atom.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ALGO</field>
+            <field name="description">Algorand</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/algo.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">LDO</field>
+            <field name="description">Lido DAO</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ldo.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">STG</field>
+            <field name="description">Stargate Finance</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/stg.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">AXL</field>
+            <field name="description">Wrapped Axelar</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/axl.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">FLOW</field>
+            <field name="description">Flow</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/flow.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ARB</field>
+            <field name="description">Arbitrum</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/arb.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">FXS</field>
+            <field name="description">Frax Share</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/fxs.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">HFT</field>
+            <field name="description">Hashflow</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/hft.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">LQTY</field>
+            <field name="description">Liquity</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/lqty.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ID</field>
+            <field name="description">SPACE ID</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/id.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">PERP</field>
+            <field name="description">Perpetual Protocol</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/perp.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">GNO</field>
+            <field name="description">Gnosis</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/gno.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">JOE (JOE)</field>
+            <field name="description">Bitcoin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/btc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">Blur (BLUR)</field>
+            <field name="description">Bitcoin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/btc.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">ANKR</field>
+            <field name="description">Ankr</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/ankr.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">RNDR</field>
+            <field name="description">Render Token</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/rndr.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">WLD</field>
+            <field name="description">Worldcoin</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/wld.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">EXFI</field>
+            <field name="description">Experimental Finance</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/exfi.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SGB</field>
+            <field name="description">Songbird</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/sgb.png"/>
+            <field name="is_withdraw_only">True</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">BOBA</field>
+            <field name="description">Boba Token</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/boba.png"/>
+            <field name="is_withdraw_only">True</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">DON</field>
+            <field name="description">Donnie Finance</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/don.png"/>
+            <field name="is_withdraw_only">True</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">SOLO</field>
+            <field name="description">Sologenic</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/solo.png"/>
+            <field name="is_withdraw_only">True</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">LUNA2</field>
+            <field name="description">Terra 2.0</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/luna2.png"/>
+            <field name="is_withdraw_only">True</field>
+            <field name="is_active">True</field>
+        </record>
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">FLR</field>
+            <field name="description">Flare</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/flr.png"/>
+            <field name="is_withdraw_only">True</field>
             <field name="is_active">True</field>
         </record>
     </data>
