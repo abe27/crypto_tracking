@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- ดึงข้อมูล Reference -->
+        <record id="dep_ps" model="crypto_tracking.symbol_group">
+            <field name="name">Unknow</field>
+        </record>
+        <record model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="dep_ps" />
+            <field name="name">THB</field>
+            <field name="description">Thai Bath</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/thai.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+    </data>
+</odoo>

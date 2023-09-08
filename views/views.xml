@@ -1,7 +1,38 @@
 <odoo>
     <data>
+
+        <record model="ir.actions.act_window" id="exchange_list_action">
+            <field name="name">ข้อมูล Exchange</field>
+            <field name="res_model">crypto_tracking.exchange_list</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="block_chain_list_action">
+            <field name="name">ข้อมูล Network</field>
+            <field name="res_model">crypto_tracking.block_chain_network</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="symbol_group_list_action">
+            <field name="name">ข้อมูลประเภทของเหรียญ</field>
+            <field name="res_model">crypto_tracking.symbol_group</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <record model="ir.actions.act_window" id="symbol_list_action">
+            <field name="name">ข้อมูลรายชื่อเหรียญ</field>
+            <field name="res_model">crypto_tracking.symbol_list</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="currency_pair_action">
+            <field name="name">ข้อมูลสกุลเงิน</field>
+            <field name="res_model">crypto_tracking.currency_pair</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <record model="ir.actions.act_window" id="tracking_list_action">
-            <field name="name">Tracking List</field>
+            <field name="name">ติดตามราคาในท้องตลาด</field>
             <field name="res_model">crypto_tracking.crypto_tracking</field>
             <field name="view_mode">tree,form,calendar,kanban</field>
         </record>
@@ -13,6 +44,11 @@
         <menuitem name="Handle" id="crypto_tracking.handle_menu" parent="crypto_tracking.menu_root"/>
         <menuitem name="Settings" id="crypto_tracking.menu_setting" parent="crypto_tracking.menu_root"/>
         <!-- actions -->
-        <menuitem name="Tracking" id="crypto_tracking.menu_tracking_list" parent="crypto_tracking.handle_menu" action="tracking_list_action"/>
+        <menuitem name="ติดตามราคาในท้องตลาด" id="crypto_tracking.menu_tracking_list" parent="crypto_tracking.handle_menu" action="tracking_list_action"/>
+        <menuitem name="ข้อมูล Exchange" id="crypto_tracking.menu_exchange_list" parent="crypto_tracking.menu_setting" action="exchange_list_action"/>
+        <menuitem name="ข้อมูล Network" id="crypto_tracking.menu_block_chain_list" parent="crypto_tracking.menu_setting" action="block_chain_list_action"/>
+        <menuitem name="ข้อมูลประเภทของเหรียญ" id="crypto_tracking.menu_symbol_group_list" parent="crypto_tracking.menu_setting" action="symbol_group_list_action"/>
+        <menuitem name="ข้อมูลรายชื่อเหรียญ" id="crypto_tracking.menu_symbol_list" parent="crypto_tracking.menu_setting" action="symbol_list_action"/>
+        <menuitem name="ข้อมูลสกุลเงิน" id="crypto_tracking.menu_currency_pair" parent="crypto_tracking.menu_setting" action="currency_pair_action"/>
     </data>
 </odoo>

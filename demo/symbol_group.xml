@@ -1,0 +1,45 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Symbol Group -->
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">Unknow</field>
+            <field name="description">ไม่ระบุ</field>
+            <field name="is_active">True</field>
+        </record>
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">Store of Value</field>
+            <field name="description">กลุ่มรักษามูลค่า</field>
+            <field name="is_active">True</field>
+        </record>
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">Smart Contract</field>
+            <field name="description">กลุ่มสัญญาอัจฉริยะ</field>
+            <field name="is_active">True</field>
+        </record>
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">Stablecoin</field>
+            <field name="description">กลุ่มนี้ถูกสร้างมาเพื่อทำให้มูลค่าของเหรียญมีเสถียร</field>
+            <field name="is_active">True</field>
+        </record>
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">DeFi</field>
+            <field name="description">Decentralized Finance ระบบการเงินไร้ตัวกลาง</field>
+            <field name="is_active">True</field>
+        </record>
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">Value Transfer</field>
+            <field name="description">เหรียญกลุ่มนี้มีความสามารถในการทำธุรกรรมที่รวดเร็ว</field>
+            <field name="is_active">True</field>
+        </record>
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">GameFi</field>
+            <field name="description">เหรียญกลุ่มถูกสร้างขึ้นเพื่อใช้ในเกมหรือโลกเสมือนจริง (Metaverse)</field>
+            <field name="is_active">True</field>
+        </record>
+        <record model="crypto_tracking.symbol_group">
+            <field name="name">Meme Coins</field>
+            <field name="description">เหรียญที่ถูกสร้างขึ้นเพื่อความสนุกโดยเฉพาะ โดยมีแรงบันดาลใจมาจากมีม (Meme) ที่เป็นกระแสร้อนแรงบนโลกออนไลน์ </field>
+            <field name="is_active">True</field>
+        </record>
+    </data>
+</odoo>

@@ -18,7 +18,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','web','mail'],
+    'depends': ['base','web','mail','resource'],
 
     # always loaded
     'data': [
@@ -32,7 +32,11 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/symbol_group.xml',
+        'demo/exchange.xml',
+        'demo/network.xml',
+        'demo/currency_pair.xml',
+        'demo/symbol.xml',
     ],
     "application": True,
     'installable': True,  # installable คือ ระบุว่าโมดูลสามารถติดตั้งได้หรือไม่

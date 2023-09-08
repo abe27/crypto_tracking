@@ -77,22 +77,7 @@
         <field name="name">crypto_tracking.calendar</field>
         <field name="model">crypto_tracking.crypto_tracking</field>
         <field name="arch" type="xml">
-            <calendar string="" date_start="tracking_date" color="" mode="month">
-                <field name="exchange_id" />
-                <field name="symbol_id" />
-                <field name="tracking_date" />
-                <field name="lastPrice" />
-                <field name="lowestAsk" />
-                <field name="highestBid" />
-                <field name="percentChange" />
-                <field name="baseVolume" />
-                <field name="quoteVolume" />
-                <field name="isFrozen" />
-                <field name="high24hr" />
-                <field name="low24hr" />
-                <field name="change" />
-                <field name="prevClose" />
-                <field name="prevOpen" />
+            <calendar string="" date_start="tracking_date" mode="month">
                 <field name="name" />
                 <field name="exchange_name" />
             </calendar>

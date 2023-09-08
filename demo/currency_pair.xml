@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <record model="crypto_tracking.currency_pair">
+            <field name="name">THB</field>
+            <field name="description">ไทยบาท</field>
+            <field name="currency_logo" type="base64" file="crypto_tracking/static/images/crypto/thai.png"/>
+            <field name="price">0</field>
+            <field name="is_active">True</field>
+        </record>
+    </data>
+</odoo>

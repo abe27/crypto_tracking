@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="excahnge_list_tree" model="ir.ui.view">
+        <field name="name">excahnge_list.tree</field>
+        <field name="model">crypto_tracking.exchange_list</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name"></field>
+                <field name="description"></field>
+                <field name="api_url"></field>
+                <field name="api_key"></field>
+                <field name="api_secret"></field>
+                <field name="api_passphrase"></field>
+                <field name="is_active"></field>
+            </tree>
+        </field>
+    </record>
 
-    
+    <record id="excahnge_list_form" model="ir.ui.view">
+        <field name="name">excahnge_list.form</field>
+        <field name="model">crypto_tracking.exchange_list</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <field name="exchange_logo" widget="image" class="oe_avatar"/>
+                    <group>
+                        <field name="name"></field>
+                        <field name="description"></field>
+                        <field name="api_url"></field>
+                        <field name="api_key"></field>
+                        <field name="api_secret"></field>
+                        <field name="api_passphrase"></field>
+                        <field name="is_active"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
+    <record id="exchange_list_view_kanban" model="ir.ui.view">
+        <field name="name">exchange_list.view.kanban</field>
+        <field name="model">crypto_tracking.exchange_list</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <field name="exchange_logo" widget="image" class="oe_avatar"/>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 </odoo>
