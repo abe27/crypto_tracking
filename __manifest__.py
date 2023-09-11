@@ -18,7 +18,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','web','mail','resource'],
+    'depends': ['base', 'web', 'mail', 'resource'],
 
     # always loaded
     'data': [
@@ -29,6 +29,7 @@
         'views/symbol_group.xml',
         'views/symbol.xml',
         'views/tracking.xml',
+        'views/pair.xml',
         'views/transfer_fee.xml',
         'views/templates.xml',
     ],

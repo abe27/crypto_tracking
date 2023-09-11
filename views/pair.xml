@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="currency_pair_view_tree" model="ir.ui.view">
+        <field name="name">currency_pair.view.tree</field>
+        <field name="model">crypto_tracking.currency_pair</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="currency_logo"/>
+                <field name="currency_id"/>
+                <field name="price"/>
+                <field name="is_active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="currency_pair_view_form" model="ir.ui.view">
+        <field name="name">currency_pair.view.form</field>
+        <field name="model">crypto_tracking.currency_pair</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <field name="currency_logo" widget="image" class="oe_avatar"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="currency_id"/>
+                        <field name="price"/>
+                        <field name="is_active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>
