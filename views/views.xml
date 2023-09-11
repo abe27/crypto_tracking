@@ -31,6 +31,12 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <record model="ir.actions.act_window" id="transfer_fee_action">
+            <field name="name">ข้อมูลค่าธรรมเนียมการโอน</field>
+            <field name="res_model">crypto_tracking.transfer_fee</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <record model="ir.actions.act_window" id="tracking_list_action">
             <field name="name">ติดตามราคาในท้องตลาด</field>
             <field name="res_model">crypto_tracking.crypto_tracking</field>
@@ -50,5 +56,6 @@
         <menuitem name="ข้อมูลประเภทของเหรียญ" id="crypto_tracking.menu_symbol_group_list" parent="crypto_tracking.menu_setting" action="symbol_group_list_action"/>
         <menuitem name="ข้อมูลรายชื่อเหรียญ" id="crypto_tracking.menu_symbol_list" parent="crypto_tracking.menu_setting" action="symbol_list_action"/>
         <menuitem name="ข้อมูลสกุลเงิน" id="crypto_tracking.menu_currency_pair" parent="crypto_tracking.menu_setting" action="currency_pair_action"/>
+        <menuitem name="ข้อมูลค่าธรรมเนียมการโอน" id="crypto_tracking.menu_transfer_fee" parent="crypto_tracking.menu_setting" action="transfer_fee_action"/>
     </data>
 </odoo>

@@ -7,8 +7,8 @@
             <field name="is_active">True</field>
         </record>
         <record model="crypto_tracking.block_chain_network">
-            <field name="name">Bitcoin network</field>
-            <field name="description">Bitcoin network</field>
+            <field name="name">Bitcoin Network</field>
+            <field name="description">Bitcoin Network</field>
             <field name="is_active">True</field>
         </record>
         <record model="crypto_tracking.block_chain_network">
@@ -169,11 +169,6 @@
         <record model="crypto_tracking.block_chain_network">
             <field name="name">Songbird Network</field>
             <field name="description">Songbird Network</field>
-            <field name="is_active">True</field>
-        </record>
-        <record model="crypto_tracking.block_chain_network">
-            <field name="name">IOST Network</field>
-            <field name="description">IOST Network</field>
             <field name="is_active">True</field>
         </record>
         <record model="crypto_tracking.block_chain_network">
