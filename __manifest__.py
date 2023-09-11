@@ -25,9 +25,11 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/exchange.xml',
+        'views/network.xml',
         'views/symbol_group.xml',
         'views/symbol.xml',
         'views/tracking.xml',
+        'views/transfer_fee.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

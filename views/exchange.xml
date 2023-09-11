@@ -33,6 +33,11 @@
                         <field name="is_active"></field>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+                </div>
             </form>
         </field>
     </record>
@@ -44,8 +49,23 @@
             <kanban>
                 <templates>
                     <t t-name="kanban-box">
-                        <div class="oe_kanban_global_click">
-                            <field name="exchange_logo" widget="image" class="oe_avatar"/>
+                        <div class="card oe_kanban_global_click" style="width:200px">
+                            <field name="exchange_logo" widget="image" class="card-img-top"/>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <field name="name" />
+                                </h4>
+
+                                <!-- <p class="card-text">
+                    ประเภท:                                    <field name="room_type_id" ref="apartment.room_type"/>
+                                </p>
+                                <p class="card-text">
+                    ราคา:                                    <field name="price" class="text-success" />
+                                </p>
+                                <p class="card-text">
+                    สถานะห้องพัก:                                    <field name="is_status" class="text-success"/>
+                                </p> -->
+                            </div>
                         </div>
                     </t>
                 </templates>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="transfer_fee_view_tree" model="ir.ui.view">
+        <field name="name">transfer_fee.view.tree</field>
+        <field name="model">crypto_tracking.transfer_fee</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="symbol_id"/>
+                <field name="block_chain_id"/>
+                <field name="description"/>
+                <field name="fee"/>
+                <field name="block_summary"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="transfer_fee_view_form" model="ir.ui.view">
+        <field name="name">transfer_fee.view.form</field>
+        <field name="model">crypto_tracking.transfer_fee</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="symbol_id"/>
+                        <field name="block_chain_id"/>
+                        <field name="description"/>
+                        <field name="fee"/>
+                        <field name="block_summary"/>
+                        <field name="is_active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="symbol_group_view_tree" model="ir.ui.view">
-        <field name="name">symbol_group.view.tree</field>
-        <field name="model">crypto_tracking.symbol_group</field>
+    <record id="block_chain_view_tree" model="ir.ui.view">
+        <field name="name">block_chain.view.tree</field>
+        <field name="model">crypto_tracking.block_chain_network</field>
         <field name="arch" type="xml">
             <tree string="">
                 <field name="name" />
                 <field name="description" />
+                <field name="fee" />
                 <field name="is_active" />
             </tree>
         </field>
     </record>
 
-    <record id="symbol_group_view_form" model="ir.ui.view">
-        <field name="name">symbol_group.view.form</field>
-        <field name="model">crypto_tracking.symbol_group</field>
+    <record id="block_chain_view_form" model="ir.ui.view">
+        <field name="name">block_chain.view.form</field>
+        <field name="model">crypto_tracking.block_chain_network</field>
         <field name="arch" type="xml">
             <form string="">
                 <sheet>
                     <group>
                         <field name="name" />
                         <field name="description" />
+                        <field name="fee" />
                         <field name="is_active" />
                     </group>
                 </sheet>
