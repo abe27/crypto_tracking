@@ -1,192 +1,192 @@
 <odoo>
-    <data noupdate="1">
+    <data>
         <!-- Symbol Group -->
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_unknow" model="crypto_tracking.block_chain_network">
             <field name="name">Unknow</field>
             <field name="description">ไม่ระบุ</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_bitcoin" model="crypto_tracking.block_chain_network">
             <field name="name">Bitcoin Network</field>
             <field name="description">Bitcoin Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_erc_20" model="crypto_tracking.block_chain_network">
             <field name="name">ERC-20</field>
             <field name="description">Ethereum network (ERC-20)</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_kap_20" model="crypto_tracking.block_chain_network">
             <field name="name">KAP-20</field>
             <field name="description">Bitkub Chain network (KAP-20)</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_ripple" model="crypto_tracking.block_chain_network">
             <field name="name">Ripple Network</field>
             <field name="description">Ripple Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_bitcoin_cash" model="crypto_tracking.block_chain_network">
             <field name="name">Bitcoin Cash Network</field>
             <field name="description">Bitcoin Cash Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_bep_20" model="crypto_tracking.block_chain_network">
             <field name="name">BEP-20</field>
             <field name="description">BNB Smart Chain (BEP-20)</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_stellar" model="crypto_tracking.block_chain_network">
             <field name="name">Stellar Network</field>
             <field name="description">Stellar Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_cardano" model="crypto_tracking.block_chain_network">
             <field name="name">Cardano Network</field>
             <field name="description">Stellar Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_wanchain" model="crypto_tracking.block_chain_network">
             <field name="name">Wanchain Network</field>
             <field name="description">Wanchain Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_zilliqa" model="crypto_tracking.block_chain_network">
             <field name="name">Zilliqa Network</field>
             <field name="description">Zilliqa Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_iost" model="crypto_tracking.block_chain_network">
             <field name="name">IOST Network</field>
             <field name="description">IOST Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_doge_coin" model="crypto_tracking.block_chain_network">
             <field name="name">Dogecoin Network</field>
             <field name="description">Dogecoin Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_band_prtocol" model="crypto_tracking.block_chain_network">
             <field name="name">Band Protocol Network</field>
             <field name="description">Band Protocol Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_kusama" model="crypto_tracking.block_chain_network">
             <field name="name">Kusama Network</field>
             <field name="description">Kusama Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_polkadot" model="crypto_tracking.block_chain_network">
             <field name="name">Polkadot Network</field>
             <field name="description">Polkadot Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_near" model="crypto_tracking.block_chain_network">
             <field name="name">NEAR Protocol Network</field>
             <field name="description">NEAR Protocol Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_secret" model="crypto_tracking.block_chain_network">
             <field name="name">Secret Network</field>
             <field name="description">Secret Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_solana" model="crypto_tracking.block_chain_network">
             <field name="name">Solana Network</field>
             <field name="description">Solana Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_avanche" model="crypto_tracking.block_chain_network">
             <field name="name">Avalanche C-Chain Network</field>
             <field name="description">Avalanche C-Chain Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_terra_classic" model="crypto_tracking.block_chain_network">
             <field name="name">Terra Classic Network</field>
             <field name="description">Terra Classic Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_polygon" model="crypto_tracking.block_chain_network">
             <field name="name">Polygon Network</field>
             <field name="description">Polygon Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_fantom" model="crypto_tracking.block_chain_network">
             <field name="name">Fantom Network</field>
             <field name="description">Fantom Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_cortex" model="crypto_tracking.block_chain_network">
             <field name="name">Cortex Network</field>
             <field name="description">Cortex Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_tron" model="crypto_tracking.block_chain_network">
             <field name="name">Tron Network</field>
             <field name="description">Tron Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_hedera" model="crypto_tracking.block_chain_network">
             <field name="name">Hedera Hashgraph Network</field>
             <field name="description">Hedera Hashgraph Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_optimism" model="crypto_tracking.block_chain_network">
             <field name="name">Optimism Network</field>
             <field name="description">Optimism Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_tezos" model="crypto_tracking.block_chain_network">
             <field name="name">Tezos Network</field>
             <field name="description">Tezos Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_celo" model="crypto_tracking.block_chain_network">
             <field name="name">Celo Network</field>
             <field name="description">Celo Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_atom" model="crypto_tracking.block_chain_network">
             <field name="name">ATOM</field>
             <field name="description">ATOM (Cosmos)</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_algo" model="crypto_tracking.block_chain_network">
             <field name="name">ALGO</field>
             <field name="description">ALGO (Algorand)</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_flow" model="crypto_tracking.block_chain_network">
             <field name="name">Flow Network</field>
             <field name="description">Flow Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_arbitrum" model="crypto_tracking.block_chain_network">
             <field name="name">Arbitrum Network</field>
             <field name="description">Arbitrum Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_songbird" model="crypto_tracking.block_chain_network">
             <field name="name">Songbird Network</field>
             <field name="description">Songbird Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_terra_2" model="crypto_tracking.block_chain_network">
             <field name="name">Terra 2.0 Network</field>
             <field name="description">Terra 2.0 Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_flare" model="crypto_tracking.block_chain_network">
             <field name="name">Flare Network</field>
             <field name="description">Flare Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_litecoin" model="crypto_tracking.block_chain_network">
             <field name="name">Litecoin Network</field>
             <field name="description">Litecoin Network</field>
             <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.block_chain_network">
+        <record id="block_chain_network_bitcoin_sv" model="crypto_tracking.block_chain_network">
             <field name="name">Bitcoin SV Network</field>
             <field name="description">Bitcoin SV Network</field>
             <field name="is_active">True</field>

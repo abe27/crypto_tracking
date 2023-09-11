@@ -32,7 +32,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        # 'demo/symbol_group.xml',
+        'demo/symbol_group.xml',
         'demo/exchange.xml',
         'demo/network.xml',
         'demo/currency_pair.xml',

@@ -1,7 +1,7 @@
 <odoo>
-    <data noupdate="1">
+    <data>
         <!-- Exchange List -->
-        <record model="crypto_tracking.exchange_list">
+        <record id="exchange_list_bitkub" model="crypto_tracking.exchange_list">
             <field name="name">Bitkub</field>
             <field name="description">-</field>
             <field name="api_url">https://api.bitkub.com/api</field>
@@ -12,7 +12,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record model="crypto_tracking.exchange_list">
+        <record id="exchange_list_satang_pro" model="crypto_tracking.exchange_list">
             <field name="name">Satang Pro</field>
             <field name="description">-</field>
             <field name="api_url">https://satangcorp.com/api</field>
@@ -23,7 +23,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record model="crypto_tracking.exchange_list">
+        <record id="exchange_list_binance" model="crypto_tracking.exchange_list">
             <field name="name">Binance</field>
             <field name="description">-</field>
             <field name="api_url">https://api.binance.com/api/v3</field>
@@ -34,7 +34,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record model="crypto_tracking.exchange_list">
+        <record id="exchange_list_kucoin" model="crypto_tracking.exchange_list">
             <field name="name">Kucoin</field>
             <field name="description">-</field>
             <field name="api_url">https://api.kucoin.com/api/v1</field>
