@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="symbol_list_btc model="crypto_tracking.symbol_list">
+        <record id="symbol_list_btc" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">BTC</field>
@@ -11,7 +11,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_eth" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">ETH</field>
@@ -21,7 +21,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_kub" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">KUB</field>
@@ -31,7 +31,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_xrp" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_value_transfer" />
             <field name="name">XRP</field>
@@ -41,7 +41,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_bch" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">BCH</field>
@@ -51,7 +51,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_usdt" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_stablecoin" />
             <field name="name">USDT</field>
@@ -61,7 +61,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_bnb" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">BNB</field>
@@ -71,7 +71,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_xlm" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_value_transfer" />
             <field name="name">XLM</field>
@@ -81,7 +81,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ada" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">ADA</field>
@@ -91,7 +91,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_wan" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">WAN</field>
@@ -101,7 +101,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_omg" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">OMG</field>
@@ -111,7 +111,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_zil" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">ZIL</field>
@@ -121,7 +121,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_snt" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">SNT</field>
@@ -131,7 +131,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_cvc" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">CVC</field>
@@ -141,7 +141,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_link" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">LINK</field>
@@ -151,7 +151,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_iost" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">IOST</field>
@@ -161,7 +161,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_zrx" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">ZRX</field>
@@ -171,7 +171,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_knc" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">KNC</field>
@@ -181,7 +181,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_abt" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">ABT</field>
@@ -191,7 +191,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_mana" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">MANA</field>
@@ -201,7 +201,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_six" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">SIX</field>
@@ -211,7 +211,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_jfin" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">JFIN</field>
@@ -221,7 +221,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_pow" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">POW</field>
@@ -231,7 +231,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_doge" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_meme_coin" />
             <field name="name">DOGE</field>
@@ -241,7 +241,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_dai" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_stablecoin" />
             <field name="name">DAI</field>
@@ -251,7 +251,7 @@
             <field name="is_active">False</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_usdc" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_stablecoin" />
             <field name="name">USDC</field>
@@ -261,7 +261,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_bat" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">BAT</field>
@@ -271,7 +271,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_mkr" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">MKR</field>
@@ -281,7 +281,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_enj" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">ENJ</field>
@@ -291,7 +291,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_band" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_value_transfer" />
             <field name="name">BAND</field>
@@ -301,7 +301,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_comp" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">COMP</field>
@@ -311,7 +311,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ksm" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">KSM</field>
@@ -321,7 +321,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_dot" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_value_transfer" />
             <field name="name">DOT</field>
@@ -331,7 +331,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_near" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">NEAR</field>
@@ -341,7 +341,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_scrt" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">SCRT</field>
@@ -351,7 +351,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_glm" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">GLM</field>
@@ -361,7 +361,17 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_glmr" model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="symbol_group_smart_contract" />
+            <field name="name">GLMR</field>
+            <field name="description">Glimmer Network</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/glmr.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="symbol_list_yfi" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">YFI</field>
@@ -371,7 +381,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_uni" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">UNI</field>
@@ -381,7 +391,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_aave" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">AAVE</field>
@@ -391,7 +401,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_alpha" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">ALPHA</field>
@@ -401,7 +411,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_bal" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">BAL</field>
@@ -411,7 +421,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_crv" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">CRV</field>
@@ -421,7 +431,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_axs" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">AXS</field>
@@ -431,7 +441,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_sand" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">SAND</field>
@@ -441,7 +451,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_sushi" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">SUSHI</field>
@@ -451,7 +461,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ocean" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">OCEAN</field>
@@ -461,7 +471,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_snx" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">SNX</field>
@@ -471,7 +481,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_gala" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">GALA</field>
@@ -481,7 +491,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_gt" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">GT</field>
@@ -491,7 +501,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_gf" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">GF</field>
@@ -501,7 +511,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ilv" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">ILV</field>
@@ -511,7 +521,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_imx" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">IMX</field>
@@ -521,7 +531,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ens" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">ENS</field>
@@ -531,7 +541,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_dydx" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">DYDX</field>
@@ -541,7 +551,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_sol" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">SOL</field>
@@ -551,7 +561,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_avax" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">AVAX</field>
@@ -561,7 +571,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_lyxe" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">LYXE</field>
@@ -571,7 +581,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ape" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">APE</field>
@@ -581,7 +591,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_luna_classic" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">LUNC</field>
@@ -591,7 +601,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_matic" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">MATIC</field>
@@ -601,7 +611,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ftm" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">FTM</field>
@@ -611,7 +621,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_chz" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">CHZ</field>
@@ -621,7 +631,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ctxc" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">CTXC</field>
@@ -631,7 +641,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_grt" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">GRT</field>
@@ -641,7 +651,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_trx" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">TRX</field>
@@ -651,7 +661,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_hbar" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">HBAR</field>
@@ -661,7 +671,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_op" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">OP</field>
@@ -671,7 +681,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_gal" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">GAL</field>
@@ -681,7 +691,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_xtz" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">XTZ</field>
@@ -691,7 +701,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_celo" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">CELO</field>
@@ -701,7 +711,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_lrc" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">LRC</field>
@@ -711,7 +721,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_busd" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_stablecoin" />
             <field name="name">BUSD</field>
@@ -721,7 +731,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_1inch" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">1INCH</field>
@@ -731,7 +741,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_atom" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">ATOM</field>
@@ -741,7 +751,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_algo" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">ALGO</field>
@@ -751,7 +761,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ldo" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">LDO</field>
@@ -761,7 +771,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_stg" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">STG</field>
@@ -771,7 +781,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_axl" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">AXL</field>
@@ -781,7 +791,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_flow" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_game_fi" />
             <field name="name">FLOW</field>
@@ -791,7 +801,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_arb" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">ARB</field>
@@ -801,7 +811,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_fxs" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_stablecoin" />
             <field name="name">FXS</field>
@@ -811,7 +821,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_hft" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">HFT</field>
@@ -821,7 +831,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_lqty" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">LQTY</field>
@@ -831,7 +841,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_id" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">ID</field>
@@ -841,7 +851,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_perp" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">PERP</field>
@@ -851,7 +861,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_gno" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">GNO</field>
@@ -861,7 +871,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_joe" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">JOE</field>
@@ -871,7 +881,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_blur" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">BLUR</field>
@@ -881,7 +891,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_ankr" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">ANKR</field>
@@ -891,7 +901,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_rndr" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">RNDR</field>
@@ -901,7 +911,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_wld" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
             <field name="name">WLD</field>
@@ -911,7 +921,27 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_movr" model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="symbol_group_smart_contract" />
+            <field name="name">MOVR</field>
+            <field name="description">Moonriver</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/movr.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="symbol_list_inj" model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="symbol_group_smart_contract" />
+            <field name="name">INJ</field>
+            <field name="description">Injective</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/inj.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="symbol_list_exfi" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">EXFI</field>
@@ -921,7 +951,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_sgb" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_value_transfer" />
             <field name="name">SGB</field>
@@ -931,7 +961,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_boba" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">BOBA</field>
@@ -941,7 +971,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_don" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">DON</field>
@@ -951,7 +981,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_solo" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">SOLO</field>
@@ -961,7 +991,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_luna_2" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_store_of_value" />
             <field name="name">LUNA2</field>
@@ -971,7 +1001,7 @@
             <field name="is_active">True</field>
         </record>
 
-        <record id="symbol_list_1" model="crypto_tracking.symbol_list">
+        <record id="symbol_list_flr" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">FLR</field>

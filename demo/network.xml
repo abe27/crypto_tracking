@@ -91,6 +91,11 @@
             <field name="description">Secret Network</field>
             <field name="is_active">True</field>
         </record>
+        <record id="block_chain_network_glimmer" model="crypto_tracking.block_chain_network">
+            <field name="name">Glimmer</field>
+            <field name="description">Glimmer Network</field>
+            <field name="is_active">True</field>
+        </record>
         <record id="block_chain_network_solana" model="crypto_tracking.block_chain_network">
             <field name="name">Solana Network</field>
             <field name="description">Solana Network</field>
@@ -189,6 +194,11 @@
         <record id="block_chain_network_bitcoin_sv" model="crypto_tracking.block_chain_network">
             <field name="name">Bitcoin SV Network</field>
             <field name="description">Bitcoin SV Network</field>
+            <field name="is_active">True</field>
+        </record>
+        <record id="block_chain_network_moonriver" model="crypto_tracking.block_chain_network">
+            <field name="name">Moonriver Network</field>
+            <field name="description">Moonriver Network</field>
             <field name="is_active">True</field>
         </record>
     </data>

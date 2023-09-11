@@ -1,315 +1,1024 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-        <!-- ดึงข้อมูล Reference -->
-        <record id="btc_symbol_id" model="crypto_tracking.symbol_list">
+    <data noupdate="1">
+        <record id="transfer_fee_btc" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_btc" />
+            <field name="block_chain_id" ref="block_chain_network_bitcoin" />
             <field name="name">BTC</field>
-        </record>
-        <record id="btc_block_chain_ids" model="crypto_tracking.block_chain_network">
-            <field name="name">Bitcoin Network</field>
-        </record>
-        <record model="crypto_tracking.transfer_fee">
-            <field name="symbol_id" ref="btc_symbol_id" />
-            <field name="block_chain_id" ref="btc_block_chain_id" />
-            <!-- <field name="fee">0.00007700</field> -->
-            <!-- <field name="block_summary">3</field> -->
+            <field name="fee">0.00007700</field>
+            <field name="block_summary">3.0</field>
             <field name="description">-</field>
             <field name="is_active">True</field>
         </record>
 
-
-
-
-        <!-- <record model="crypto_tracking.symbol_list">
+        <record id="transfer_fee_eth" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_eth" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">ETH</field>
+            <field name="fee">0.00061</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">KUB</field>
+
+        <record id="transfer_fee_kub_erc_20" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_kub" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">KUB(ERC-20)</field>
+            <field name="fee">1.13</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_kub_kap_20" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_kub" />
+            <field name="block_chain_id" ref="block_chain_network_kap_20" />
+            <field name="name">KUB(KAP-20)</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="transfer_fee_xrp" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_xrp" />
+            <field name="block_chain_id" ref="block_chain_network_ripple" />
             <field name="name">XRP</field>
+            <field name="fee">0.2</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_bch" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_bch" />
+            <field name="block_chain_id" ref="block_chain_network_bitcoin_cash" />
             <field name="name">BCH</field>
+            <field name="fee">0.00064</field>
+            <field name="block_summary">3.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">USDT</field>
+
+        <record id="transfer_fee_usdt_bep_20" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_usdt" />
+            <field name="block_chain_id" ref="block_chain_network_bep_20" />
+            <field name="name">USDT(BEP-20)</field>
+            <field name="fee">0.8</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_usdt_erc_20" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_usdt" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">USDT(ERC-20)</field>
+            <field name="fee">3.21</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="transfer_fee_bnb" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_bnb" />
+            <field name="block_chain_id" ref="block_chain_network_bep_20" />
             <field name="name">BNB</field>
+            <field name="fee">0.0005</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_xlm" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_xlm" />
+            <field name="block_chain_id" ref="block_chain_network_stellar" />
             <field name="name">XLM</field>
+            <field name="fee">0.02</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_ada" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ada" />
+            <field name="block_chain_id" ref="block_chain_network_cardano" />
             <field name="name">ADA</field>
+            <field name="fee">0.8</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_wan" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_wan" />
+            <field name="block_chain_id" ref="block_chain_network_wanchain" />
             <field name="name">WAN</field>
+            <field name="fee">0.1</field>
+            <field name="block_summary">30.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_omg" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_omg" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">OMG</field>
+            <field name="fee">4.35</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_zil" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_zil" />
+            <field name="block_chain_id" ref="block_chain_network_zilliqa" />
             <field name="name">ZIL</field>
+            <field name="fee">0.2</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_snt" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_snt" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">SNT</field>
+            <field name="fee">97.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_cvc" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_cvc" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">CVC</field>
+            <field name="fee">29.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_link" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_link" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">LINK</field>
+            <field name="fee">0.32</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_iost" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_iost" />
+            <field name="block_chain_id" ref="block_chain_network_iost" />
             <field name="name">IOST</field>
+            <field name="fee">1.0</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_zrx" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_zrx" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">ZRX</field>
+            <field name="fee">11.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_knc" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_knc" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">KNC</field>
+            <field name="fee">4.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_abt" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_abt" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">ABT</field>
+            <field name="fee">16.8</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_mana" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_mana" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">MANA</field>
+            <field name="fee">6.96</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_six" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_six" />
+            <field name="block_chain_id" ref="block_chain_network_stellar" />
             <field name="name">SIX</field>
+            <field name="fee">1.0</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_jfin" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_jfin" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">JFIN</field>
+            <field name="fee">7.16</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_pow" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_pow" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">POW</field>
+            <field name="fee">15.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_doge" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_doge" />
+            <field name="block_chain_id" ref="block_chain_network_doge_coin" />
             <field name="name">DOGE</field>
+            <field name="fee">4.0</field>
+            <field name="block_summary">2.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_dai" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_dai" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">DAI</field>
+            <field name="fee">4.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_usdc" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_usdc" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">USDC</field>
+            <field name="fee">3.21</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_bat" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_bat" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">BAT</field>
+            <field name="fee">12.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_mkr" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_mkr" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">MKR</field>
+            <field name="fee">0.0018</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_enj" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_enj" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">ENJ</field>
+            <field name="fee">8.3</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_band" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_band" />
+            <field name="block_chain_id" ref="block_chain_network_band_prtocol" />
             <field name="name">BAND</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">15.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_comp" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_comp" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">COMP</field>
+            <field name="fee">0.05100000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_ksm" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ksm" />
+            <field name="block_chain_id" ref="block_chain_network_kusama" />
             <field name="name">KSM</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_dot" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_dot" />
+            <field name="block_chain_id" ref="block_chain_network_polkadot" />
             <field name="name">DOT</field>
+            <field name="fee">0.08</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_near" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_near" />
+            <field name="block_chain_id" ref="block_chain_network_near" />
             <field name="name">NEAR</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_scrt" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_scrt" />
+            <field name="block_chain_id" ref="block_chain_network_secret" />
             <field name="name">SCRT</field>
+            <field name="fee">0.1</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_glm_erc_20" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_glm" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">GLM</field>
+            <field name="fee">12.00000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_glmr" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_glmr" />
+            <field name="block_chain_id" ref="block_chain_network_glimmer" />
+            <field name="name">GLMR</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">30.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="transfer_fee_yfi" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_yfi" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">YFI</field>
+            <field name="fee">0.00037000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_uni" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_uni" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">UNI</field>
+            <field name="fee">0.48</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_aave" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_aave" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">AAVE</field>
+            <field name="fee">0.037</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_alpha" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_alpha" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">ALPHA</field>
+            <field name="fee">24.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_bal" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_bal" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">BAL</field>
+            <field name="fee">0.61</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_crv" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_crv" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">CRV</field>
+            <field name="fee">4.67</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_axs" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_axs" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">AXS</field>
+            <field name="fee">0.45</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_sand" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_sand" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">SAND</field>
+            <field name="fee">6.7</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_sushi" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_sushi" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">SUSHI</field>
+            <field name="fee">3.57</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_ocean" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ocean" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">OCEAN</field>
+            <field name="fee">6.23</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_snx" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_snx" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">SNX</field>
+            <field name="fee">0.96</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_gala" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_gala" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">GALA</field>
+            <field name="fee">125.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_gt" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_gt" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
             <field name="name">GT</field>
+            <field name="fee">0.54</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">GF</field>
+
+        <record id="transfer_fee_gf" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_gf" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">GuildFi</field>
+            <field name="fee">77.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">ILV</field>
+
+        <record id="transfer_fee_ilv" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ilv" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Illuvium</field>
+            <field name="fee">0.048</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">IMX</field>
+
+        <record id="transfer_fee_imx" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_imx" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Immutable X</field>
+            <field name="fee">3.68000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">ENS</field>
+
+        <record id="transfer_fee_ens" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ens" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Ethereum Name Service</field>
+            <field name="fee">0.27</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">DYDX</field>
+
+        <record id="transfer_fee_dydx" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_dydx" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">dYdX</field>
+            <field name="fee">1.01</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">SOL</field>
+
+        <record id="transfer_fee_sol" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_sol" />
+            <field name="block_chain_id" ref="block_chain_network_solana" />
+            <field name="name">Solana</field>
+            <field name="fee">0.00800000</field>
+            <field name="block_summary">5.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">AVAX</field>
+
+        <record id="transfer_fee_avax" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_avax" />
+            <field name="block_chain_id" ref="block_chain_network_avanche" />
+            <field name="name">Avalanche</field>
+            <field name="fee">0.00800000</field>
+            <field name="block_summary">12.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">LYXE</field>
+
+        <record id="transfer_fee_lyxe" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_lyxe" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">LUKSO</field>
+            <field name="fee">0.47000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">APE</field>
+
+        <record id="transfer_fee_ape" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ape" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">ApeCoin</field>
+            <field name="fee">1.54000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">LUNC</field>
+
+        <record id="transfer_fee_luna_classic" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_luna_classic" />
+            <field name="block_chain_id" ref="block_chain_network_terra_classic" />
+            <field name="name">Terra Classic</field>
+            <field name="fee">22.66000000</field>
+            <field name="block_summary">5.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">MATIC</field>
+
+        <record id="transfer_fee_matic" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_matic" />
+            <field name="block_chain_id" ref="block_chain_network_polygon" />
+            <field name="name">Polygon</field>
+            <field name="fee">0.1</field>
+            <field name="block_summary">5.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">FTM</field>
+
+        <record id="transfer_fee_ftm" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ftm" />
+            <field name="block_chain_id" ref="block_chain_network_fantom" />
+            <field name="name">Fantom</field>
+            <field name="fee">0.30000000</field>
+            <field name="block_summary">5.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">CHZ</field>
+
+        <record id="transfer_fee_chz" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_chz" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Chiliz</field>
+            <field name="fee">34.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">CTXC</field>
+
+        <record id="transfer_fee_ctxc" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ctxc" />
+            <field name="block_chain_id" ref="block_chain_network_cortex" />
+            <field name="name">Cortex</field>
+            <field name="fee">0.1</field>
+            <field name="block_summary">300.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">GRT</field>
+
+        <record id="transfer_fee_grt" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_grt" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">The Graph</field>
+            <field name="fee">23.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">TRX</field>
+
+        <record id="transfer_fee_trx" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_trx" />
+            <field name="block_chain_id" ref="block_chain_network_tron" />
+            <field name="name">TRON</field>
+            <field name="fee">1.0</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">HBAR</field>
+
+        <record id="transfer_fee_hbar" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_hbar" />
+            <field name="block_chain_id" ref="block_chain_network_hedera" />
+            <field name="name">Hedera</field>
+            <field name="fee">0.80000000</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">OP</field>
+
+        <record id="transfer_fee_op" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_op" />
+            <field name="block_chain_id" ref="block_chain_network_optimism" />
+            <field name="name">Optimism</field>
+            <field name="fee">0.09</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">GAL</field>
+
+        <record id="transfer_fee_gal" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_gal" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Galxe</field>
+            <field name="fee">1.81000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">XTZ</field>
+
+        <record id="transfer_fee_xtz" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_xtz" />
+            <field name="block_chain_id" ref="block_chain_network_tezos" />
+            <field name="name">Tezos</field>
+            <field name="fee">0.01000000</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">CELO</field>
+
+        <record id="transfer_fee_celo" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_celo" />
+            <field name="block_chain_id" ref="block_chain_network_celo" />
+            <field name="name">Celo</field>
+            <field name="fee">0.001</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">LRC</field>
+
+        <record id="transfer_fee_lrc" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_lrc" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Loopring</field>
+            <field name="fee">10.00000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">BUSD</field>
+
+        <record id="transfer_fee_1inch" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_1inch" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">1inch Network</field>
+            <field name="fee">8.67</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">1INCH</field>
+
+        <record id="transfer_fee_atom" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_atom" />
+            <field name="block_chain_id" ref="block_chain_network_atom" />
+            <field name="name">Cosmos</field>
+            <field name="fee">0.004</field>
+            <field name="block_summary">10.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">ATOM</field>
+
+        <record id="transfer_fee_algo" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_algo" />
+            <field name="block_chain_id" ref="block_chain_network_algo" />
+            <field name="name">Algorand</field>
+            <field name="fee">0.00800000</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">ALGO</field>
+
+        <record id="transfer_fee_ldo" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ldo" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Lido DAO</field>
+            <field name="fee">1.33000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">LDO</field>
+
+        <record id="transfer_fee_stg" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_stg" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Stargate Finance</field>
+            <field name="fee">3.89</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">STG</field>
+
+        <record id="transfer_fee_axl" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_axl" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Wrapped Axelar</field>
+            <field name="fee">5.98</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">AXL</field>
+
+        <record id="transfer_fee_flow" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_flow" />
+            <field name="block_chain_id" ref="block_chain_network_flow" />
+            <field name="name">Flow</field>
+            <field name="fee">0.00800000</field>
+            <field name="block_summary">20.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">FLOW</field>
+
+        <record id="transfer_fee_hft" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_hft" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Hashflow</field>
+            <field name="fee">6.01000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">ARB</field>
+
+        <record id="transfer_fee_arb" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_arb" />
+            <field name="block_chain_id" ref="block_chain_network_arbitrum" />
+            <field name="name">Arbitrum</field>
+            <field name="fee">0.01900000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">FXS</field>
+
+        <record id="transfer_fee_fxs" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_fxs" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Frax Share</field>
+            <field name="fee">0.38000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">HFT</field>
+
+        <record id="transfer_fee_lqty" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_lqty" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Liquity</field>
+            <field name="fee">2.54000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">LQTY</field>
+
+        <record id="transfer_fee_id" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_id" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">SPACE ID</field>
+            <field name="fee">9.43000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">ID</field>
+
+        <record id="transfer_fee_perp" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_perp" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Perpetual Protocol</field>
+            <field name="fee">1.93</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">PERP</field>
+
+        <record id="transfer_fee_gno" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_gno" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Gnosis</field>
+            <field name="fee">0.02</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">GNO</field>
-        </record>
-        <record model="crypto_tracking.symbol_list">
+
+        <record id="transfer_fee_joe" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_joe" />
+            <field name="block_chain_id" ref="block_chain_network_avanche" />
             <field name="name">JOE</field>
+            <field name="fee">0.1</field>
+            <field name="block_summary">12.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">BLUR</field>
+
+        <record id="transfer_fee_blur" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_blur" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Blur</field>
+            <field name="fee">6.88</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">ANKR</field>
+
+        <record id="transfer_fee_ankr" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_ankr" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Ankr</field>
+            <field name="fee">109.0</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">RNDR</field>
+
+        <record id="transfer_fee_rndr" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_rndr" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Render Token</field>
+            <field name="fee">1.37</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">WLD</field>
+
+        <record id="transfer_fee_wld" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_wld" />
+            <field name="block_chain_id" ref="block_chain_network_optimism" />
+            <field name="name">Worldcoin</field>
+            <field name="fee">0.20000000</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">EXFI</field>
+
+        <record id="transfer_fee_movr" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_movr" />
+            <field name="block_chain_id" ref="block_chain_network_moonriver" />
+            <field name="name">Moonriver</field>
+            <field name="fee">0.20000000</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">SGB</field>
+
+        <record id="transfer_fee_inj" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_inj" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Injective</field>
+            <field name="fee">0.14000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">True</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">BOBA</field>
+
+        <record id="transfer_fee_exfi" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_exfi" />
+            <field name="block_chain_id" ref="block_chain_network_songbird" />
+            <field name="name">Experimental Finance</field>
+            <field name="fee">0.01000000</field>
+            <field name="block_summary">30.0</field>
+            <field name="description">-</field>
+            <field name="is_active">False</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">DON</field>
+
+        <record id="transfer_fee_sgb" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_sgb" />
+            <field name="block_chain_id" ref="block_chain_network_songbird" />
+            <field name="name">Songbird</field>
+            <field name="fee">0.01000000</field>
+            <field name="block_summary">30.0</field>
+            <field name="description">-</field>
+            <field name="is_active">False</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">SOLO</field>
+
+        <record id="transfer_fee_boba" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_boba" />
+            <field name="block_chain_id" ref="block_chain_network_erc_20" />
+            <field name="name">Boba Token</field>
+            <field name="fee">35.00000000</field>
+            <field name="block_summary">25.0</field>
+            <field name="description">-</field>
+            <field name="is_active">False</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">LUNA2</field>
+
+        <record id="transfer_fee_don" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_don" />
+            <field name="block_chain_id" ref="block_chain_network_iost" />
+            <field name="name">Donnie Finance</field>
+            <field name="fee">37.00000000</field>
+            <field name="block_summary">1.0</field>
+            <field name="description">-</field>
+            <field name="is_active">False</field>
         </record>
-        <record model="crypto_tracking.symbol_list">
-            <field name="name">FLR</field>
-        </record> -->
+
+        <record id="transfer_fee_solo" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_solo" />
+            <field name="block_chain_id" ref="block_chain_network_ripple" />
+            <field name="name">Sologenic</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">30.0</field>
+            <field name="description">-</field>
+            <field name="is_active">False</field>
+        </record>
+
+        <record id="transfer_fee_luna_2" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_luna_2" />
+            <field name="block_chain_id" ref="block_chain_network_terra_2" />
+            <field name="name">Terra 2.0</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">5.0</field>
+            <field name="description">-</field>
+            <field name="is_active">False</field>
+        </record>
+
+        <record id="transfer_fee_flr" model="crypto_tracking.transfer_fee">
+            <field name="symbol_id" ref="symbol_list_flr" />
+            <field name="block_chain_id" ref="block_chain_network_flare" />
+            <field name="name">Flare</field>
+            <field name="fee">0.01</field>
+            <field name="block_summary">12.0</field>
+            <field name="description">-</field>
+            <field name="is_active">False</field>
+        </record>
     </data>
 </odoo>
