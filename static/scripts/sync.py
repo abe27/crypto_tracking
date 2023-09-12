@@ -2,17 +2,19 @@ import xmlrpc.client
 import pandas as pd
 import sys
 import requests
+from datetime import datetime
 
 
 odoo_url = "http://localhost:8081"
 odoo_db = "odoo"
 odoo_username = 'admin'
 odoo_password = "admin"
+# f96bd49d955794f770df528454b505bc1667669b
 
 
 def main():
     common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(odoo_url))
-    print(common.version())
+    # print(common.version())
 
     uid = common.authenticate(odoo_db, odoo_username, odoo_password, {})
     models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(odoo_url))
@@ -20,7 +22,7 @@ def main():
         try:
             # Get Bitkub Ticker
             exchange = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.exchange_list', 'search', [
-                                        [['name', '=', "Bitkub"]]])
+                [['name', '=', "Bitkub"]]])
             currency = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.currency_pair', 'search', [
                 [['name', '=', "THB"]]])
             response = requests.request(
@@ -31,7 +33,10 @@ def main():
                 sym = str(key.replace('THB_', '')).strip()
                 symbol = models.execute_kw(
                     odoo_db, uid, odoo_password, 'crypto_tracking.symbol_list', 'search', [[['name', '=', sym]]])
-                ids = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking', 'create', [{
+
+                isDuplicate = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking', 'search', [
+                                                [['exchange_id', '=', exchange[0]], ['symbol_id', '=', symbol[0]]]])
+                insData = {
                     "name": key,
                     "exchange_id": exchange[0],
                     "symbol_id": symbol[0],
@@ -48,10 +53,18 @@ def main():
                     "change": data["change"],
                     "prevClose": data["prevClose"],
                     "prevOpen": data["prevOpen"],
-                }])
+                }
 
-                print(f"{ids} ==> {key}")
-        
+                if len(isDuplicate) > 0:
+                    # insData["tracking_date"] = str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                    ids = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking','write', [isDuplicate,insData])
+                    print(f"{isDuplicate} ==> UPDATE {key}::{ids}")
+                else:
+                    ids = models.execute_kw(
+                        odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking', 'create', [insData])
+
+                    print(f"{ids} ==> INSERT {key}")
+
         except Exception as e:
             print(e)
 

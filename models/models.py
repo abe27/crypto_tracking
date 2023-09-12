@@ -132,12 +132,15 @@ class crypto_tracking(models.Model):
     change = fields.Float(string="change", digits=(12,8), default="0.0", tracking=True)# "change": 2697.99,
     prevClose = fields.Float(string="prevClose", digits=(12,8), default="0.0", tracking=True)# "prevClose": 913303,
     prevOpen = fields.Float(string="prevOpen", digits=(12,8), default="0.0", tracking=True)# "prevOpen": 910605.01
-    # name = fields.Char(string="Symbol", compute="_value_symbol", store=True, tracking=True)
-    # currency_pair_name = fields.Char(string="Pair", compute="_value_symbol", store=True, tracking=True)
-    # exchange_name = fields.Char(string="Exchange", compute="_value_symbol", store=True, tracking=True)
     symbol_image = fields.Image(compute="_value_symbol", store=True)
     exchange_image = fields.Image(compute="_value_symbol", store=True)
     pair_image = fields.Image(compute="_value_symbol", store=True)
+
+
+    def write(self, obj):
+        obj["tracking_date"] = fields.Datetime.now()
+        res = super().write(obj)
+        return res
 
     @api.depends('symbol_id','exchange_id','currency_pair_id')
     def _value_symbol(self):
