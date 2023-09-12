@@ -6,3 +6,4 @@ access_crypto_tracking_symbol_list,crypto_tracking.symbol_list,model_crypto_trac
 access_crypto_tracking_currency_pair,crypto_tracking.currency_pair,model_crypto_tracking_currency_pair,base.group_user,1,1,1,1
 access_crypto_tracking_crypto_tracking,crypto_tracking.crypto_tracking,model_crypto_tracking_crypto_tracking,base.group_user,1,1,1,1
 access_crypto_tracking_transfer_fee,crypto_tracking.transfer_fee,model_crypto_tracking_transfer_fee,base.group_user,1,1,1,1
+access_crypto_tracking_history,crypto_tracking.history,model_crypto_tracking_history,base.group_user,1,1,1,1
