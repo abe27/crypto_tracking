@@ -47,9 +47,8 @@
                 <header>
                 </header>
                 <sheet>
+                    <field name="symbol_image" widget="image" class="oe_avatar" />
                     <group>
-                        <field name="name" />
-                        <field name="exchange_id" />
                         <field name="symbol_id" />
                         <field name="currency_pair_id" />
                         <field name="tracking_date" />

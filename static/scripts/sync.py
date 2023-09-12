@@ -17,7 +17,6 @@ def main():
     uid = common.authenticate(odoo_db, odoo_username, odoo_password, {})
     models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(odoo_url))
     if uid:
-        print(uid)
         # Get Bitkub Ticker
 
         exchange = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.exchange_list', 'search', [

@@ -119,7 +119,7 @@ class crypto_tracking(models.Model):
     symbol_id = fields.Many2one('crypto_tracking.symbol_list', string="Symbol Name", required=True, tracking=True)
     currency_pair_id = fields.Many2one('crypto_tracking.currency_pair', string="Currency Pair Name", required=True, tracking=True)
     name = fields.Char(string="Symbol", required=True, tracking=True)
-    tracking_date = fields.Datetime(string="Tracking At", default=lambda self: fields.Date.today(), tracking=True)
+    tracking_date = fields.Datetime(string="Tracking At", default=lambda self: fields.Datetime.now(), tracking=True)
     lastPrice = fields.Float(string="last price", digits=(12,8), required=True, tracking=True)# "last": 913303,
     lowestAsk = fields.Float(string="lowestAsk", digits=(12,8), default="0.0", tracking=True)# "lowestAsk": 913839.79,
     highestBid = fields.Float(string="highestBid", digits=(12,8), default="0.0", tracking=True)# "highestBid": 913303.01,
@@ -135,10 +135,13 @@ class crypto_tracking(models.Model):
     # name = fields.Char(string="Symbol", compute="_value_symbol", store=True, tracking=True)
     # currency_pair_name = fields.Char(string="Pair", compute="_value_symbol", store=True, tracking=True)
     # exchange_name = fields.Char(string="Exchange", compute="_value_symbol", store=True, tracking=True)
+    symbol_image = fields.Image(compute="_value_symbol", store=True)
+    exchange_image = fields.Image(compute="_value_symbol", store=True)
+    pair_image = fields.Image(compute="_value_symbol", store=True)
 
-    # @api.depends('symbol_id')
-    # def _value_symbol(self):
-    #     for record in self:
-    #         record.name = record.symbol_id.name
-    #         # record.exchange_name = record.exchange_id.name
-    #         # record.currency_pair_name = record.currency_pair_id.name
+    @api.depends('symbol_id','exchange_id','currency_pair_id')
+    def _value_symbol(self):
+        for record in self:
+            record.symbol_image = record.symbol_id.symbol_logo
+            record.exchange_image = record.exchange_id.exchange_logo
+            record.pair_image = record.currency_pair_id.currency_logo
