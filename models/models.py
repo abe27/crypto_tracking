@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from datetime import datetime
 
 
 # class crypto_tracking(models.Model):
@@ -182,6 +183,7 @@ class crypto_tracking(models.Model):
     def write(self, obj):
         obj["tracking_date"] = fields.Datetime.now()
         self.env['crypto_tracking.history'].create({
+            "sync_at": datetime.now(),
             "name": self.symbol_id.name,
             "pair": self.currency_pair_id.name,
             "price": self.lastPrice,
@@ -193,16 +195,18 @@ class crypto_tracking(models.Model):
         return res
 
     @api.model_create_multi
-    def create(self, values):
+    def create(self, obj):
+        result = super().create(obj)
+        symbol = str(obj[0]["name"]).replace("THB_","").strip()
         self.env['crypto_tracking.history'].create({
-            "name": self.symbol_id.name,
-            "pair": self.currency_pair_id.name,
-            "price": self.lastPrice,
-            "percentChange": self.percentChange,
-            "baseVolume": self.baseVolume,
-            "quoteVolume": self.quoteVolume,
+            "sync_at": datetime.now(),
+            "name": symbol,
+            "pair": "THB",
+            "price": obj[0]["lastPrice"],
+            "percentChange": obj[0]["percentChange"],
+            "baseVolume": obj[0]["baseVolume"],
+            "quoteVolume": obj[0]["quoteVolume"],
         })
-        result = super().create(values)
         return result
 
     @api.depends('symbol_id', 'exchange_id', 'currency_pair_id')
@@ -219,7 +223,7 @@ class history(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
 
     sync_at = fields.Datetime(
-        string="Tracking At", default=lambda self: fields.Datetime.now(), tracking=True)
+        string="Sync At", default=lambda self: fields.Datetime.now(), tracking=True)
     name = fields.Char(string="Symbol", required=True, tracking=True)
     pair = fields.Char(string="Pair", required=True, tracking=True)
     price = fields.Float(string="Price", digits=(12, 8),required=True, tracking=True)
