@@ -20,7 +20,7 @@ from odoo import models, fields, api
 class exchange_list(models.Model):
     _name = 'crypto_tracking.exchange_list'
     _description = 'ข้อมูล Exchange'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin', 'avatar.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
     _sql_constraints = [
         ('name_uniq', 'unique(name)', "Tag already exists!"),
     ]
@@ -38,7 +38,7 @@ class exchange_list(models.Model):
 class block_chain_network(models.Model):
     _name = 'crypto_tracking.block_chain_network'
     _description = 'ข้อมูล Network'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin', 'avatar.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
     _sql_constraints = [
         ('name_uniq', 'unique(name)', "Tag already exists!"),
     ]
@@ -51,7 +51,7 @@ class block_chain_network(models.Model):
 class symbol_group(models.Model):
     _name = 'crypto_tracking.symbol_group'
     _description = 'ข้อมูลประเภทของเหรียญ'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin', 'avatar.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
     _sql_constraints = [
         ('name_uniq', 'unique(name)', "Tag already exists!"),
     ]
@@ -63,7 +63,7 @@ class symbol_group(models.Model):
 class symbol_list(models.Model):
     _name = 'crypto_tracking.symbol_list'
     _description = 'ข้อมูลรายชื่อเหรียญ'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin', 'avatar.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
     _sql_constraints = [
         ('name_uniq', 'unique(name)', "Tag already exists!"),
     ]
@@ -78,7 +78,7 @@ class symbol_list(models.Model):
 class currency_pair(models.Model):
     _name = 'crypto_tracking.currency_pair'
     _description = 'ข้อมูลสกุลเงิน'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin', 'avatar.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
     _sql_constraints = [
         ('name_uniq', 'unique(name)', "Tag already exists!"),
     ]
@@ -93,7 +93,7 @@ class currency_pair(models.Model):
 class transfer_fee(models.Model):
     _name = 'crypto_tracking.transfer_fee'
     _description = 'ข้อมูลอัตราค่าธรรมเนียมการโอน'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin', 'avatar.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
 
     symbol_id = fields.Many2one('crypto_tracking.symbol_list', string="Symbol Name", required=True, tracking=True)
     block_chain_id = fields.Many2one('crypto_tracking.block_chain_network', string="Block Chain Network", required=True, tracking=True)
@@ -113,11 +113,12 @@ class transfer_fee(models.Model):
 class crypto_tracking(models.Model):
     _name = 'crypto_tracking.crypto_tracking'
     _description = 'ข้อมูลการติดตามราคาในท้องตลาด'
-    _inherit = ['mail.thread', 'mail.activity.mixin', 'resource.mixin', 'avatar.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
 
     exchange_id = fields.Many2one('crypto_tracking.exchange_list', string="Exchange Name", required=True, tracking=True)
     symbol_id = fields.Many2one('crypto_tracking.symbol_list', string="Symbol Name", required=True, tracking=True)
     currency_pair_id = fields.Many2one('crypto_tracking.currency_pair', string="Currency Pair Name", required=True, tracking=True)
+    name = fields.Char(string="Symbol", required=True, tracking=True)
     tracking_date = fields.Datetime(string="Tracking At", default=lambda self: fields.Date.today(), tracking=True)
     lastPrice = fields.Float(string="last price", digits=(12,8), required=True, tracking=True)# "last": 913303,
     lowestAsk = fields.Float(string="lowestAsk", digits=(12,8), default="0.0", tracking=True)# "lowestAsk": 913839.79,
@@ -131,13 +132,13 @@ class crypto_tracking(models.Model):
     change = fields.Float(string="change", digits=(12,8), default="0.0", tracking=True)# "change": 2697.99,
     prevClose = fields.Float(string="prevClose", digits=(12,8), default="0.0", tracking=True)# "prevClose": 913303,
     prevOpen = fields.Float(string="prevOpen", digits=(12,8), default="0.0", tracking=True)# "prevOpen": 910605.01
-    name = fields.Char(string="Symbol", compute="_value_symbol", store=True, tracking=True)
-    currency_pair_name = fields.Char(string="Pair", compute="_value_symbol", store=True, tracking=True)
-    exchange_name = fields.Char(string="Exchange", compute="_value_symbol", store=True, tracking=True)
+    # name = fields.Char(string="Symbol", compute="_value_symbol", store=True, tracking=True)
+    # currency_pair_name = fields.Char(string="Pair", compute="_value_symbol", store=True, tracking=True)
+    # exchange_name = fields.Char(string="Exchange", compute="_value_symbol", store=True, tracking=True)
 
-    @api.depends('symbol_id', 'exchange_id','currency_pair_id')
-    def _value_symbol(self):
-        for record in self:
-            record.name = record.symbol_id.name
-            record.exchange_name = record.exchange_id.name
-            record.currency_pair_name = record.currency_pair_id.name
+    # @api.depends('symbol_id')
+    # def _value_symbol(self):
+    #     for record in self:
+    #         record.name = record.symbol_id.name
+    #         # record.exchange_name = record.exchange_id.name
+    #         # record.currency_pair_name = record.currency_pair_id.name
