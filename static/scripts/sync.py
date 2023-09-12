@@ -17,40 +17,43 @@ def main():
     uid = common.authenticate(odoo_db, odoo_username, odoo_password, {})
     models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(odoo_url))
     if uid:
-        # Get Bitkub Ticker
+        try:
+            # Get Bitkub Ticker
+            exchange = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.exchange_list', 'search', [
+                                        [['name', '=', "Bitkub"]]])
+            currency = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.currency_pair', 'search', [
+                [['name', '=', "THB"]]])
+            response = requests.request(
+                "GET", "https://api.bitkub.com/api/market/ticker")
+            obj = response.json()
+            for key in obj:
+                data = obj[key]
+                sym = str(key.replace('THB_', '')).strip()
+                symbol = models.execute_kw(
+                    odoo_db, uid, odoo_password, 'crypto_tracking.symbol_list', 'search', [[['name', '=', sym]]])
+                ids = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking', 'create', [{
+                    "name": key,
+                    "exchange_id": exchange[0],
+                    "symbol_id": symbol[0],
+                    "currency_pair_id": currency[0],
+                    "lastPrice": data["last"],
+                    "lowestAsk": data["lowestAsk"],
+                    "highestBid": data["highestBid"],
+                    "percentChange": data["percentChange"],
+                    "baseVolume": data["baseVolume"],
+                    "quoteVolume": data["quoteVolume"],
+                    "isFrozen": data["isFrozen"],
+                    "high24hr": data["high24hr"],
+                    "low24hr": data["low24hr"],
+                    "change": data["change"],
+                    "prevClose": data["prevClose"],
+                    "prevOpen": data["prevOpen"],
+                }])
 
-        exchange = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.exchange_list', 'search', [
-                                     [['name', '=', "Bitkub"]]])
-        currency = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.currency_pair', 'search', [
-            [['name', '=', "THB"]]])
-        response = requests.request(
-            "GET", "https://api.bitkub.com/api/market/ticker")
-        obj = response.json()
-        for key in obj:
-            data = obj[key]
-            sym = str(key.replace('THB_', '')).strip()
-            symbol = models.execute_kw(
-                odoo_db, uid, odoo_password, 'crypto_tracking.symbol_list', 'search', [[['name', '=', sym]]])
-            ids = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking', 'create', [{
-                "name": key,
-                "exchange_id": exchange[0],
-                "symbol_id": symbol[0],
-                "currency_pair_id": currency[0],
-                "lastPrice": data["last"],
-                "lowestAsk": data["lowestAsk"],
-                "highestBid": data["highestBid"],
-                "percentChange": data["percentChange"],
-                "baseVolume": data["baseVolume"],
-                "quoteVolume": data["quoteVolume"],
-                "isFrozen": data["isFrozen"],
-                "high24hr": data["high24hr"],
-                "low24hr": data["low24hr"],
-                "change": data["change"],
-                "prevClose": data["prevClose"],
-                "prevOpen": data["prevOpen"],
-            }])
-
-            print(ids)
+                print(f"{ids} ==> {key}")
+        
+        except Exception as e:
+            print(e)
 
 
 if __name__ == '__main__':
