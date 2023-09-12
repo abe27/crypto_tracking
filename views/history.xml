@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="history_view_tree" model="ir.ui.view">
+        <field name="name">history.view.tree</field>
+        <field name="model">crypto_tracking.history</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <!-- <field name="crypto_tracking_id"/> -->
+                <field name="name"/>
+                <field name="pair"/>
+                <field name="price"/>
+                <field name="quoteVolume"/>
+                <field name="percentChange"/>
+                <field name="sync_at"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="history_view_form" model="ir.ui.view">
+        <field name="name">history.view.form</field>
+        <field name="model">crypto_tracking.history</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="crypto_tracking_id"/>
+                        <field name="name"/>
+                        <field name="pair"/>
+                        <field name="price"/>
+                        <field name="quoteVolume"/>
+                        <field name="percentChange"/>
+                        <field name="sync_at"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>

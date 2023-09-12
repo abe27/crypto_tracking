@@ -31,6 +31,7 @@
         'views/tracking.xml',
         'views/pair.xml',
         'views/transfer_fee.xml',
+        'views/history.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

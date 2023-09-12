@@ -19,7 +19,7 @@
         <field name="name">crypto_tracking.tree</field>
         <field name="model">crypto_tracking.crypto_tracking</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree position="inside">
                 <field name="name" />
                 <field name="exchange_id" />
                 <field name="symbol_id" />
@@ -45,26 +45,55 @@
         <field name="arch" type="xml">
             <form string="">
                 <header>
+                    <button name="reloadData" string="Sync" type="object" class="oe_highlight" />
+                    <field name="is_status" widget="statusbar" />
                 </header>
                 <sheet>
-                    <field name="symbol_image" widget="image" class="oe_avatar" />
-                    <group>
-                        <field name="symbol_id" />
-                        <field name="currency_pair_id" />
-                        <field name="tracking_date" />
-                        <field name="lastPrice" />
-                        <field name="lowestAsk" />
-                        <field name="highestBid" />
-                        <field name="percentChange" />
-                        <field name="baseVolume" />
-                        <field name="quoteVolume" />
-                        <field name="isFrozen" />
-                        <field name="high24hr" />
-                        <field name="low24hr" />
-                        <field name="change" />
-                        <field name="prevClose" />
-                        <field name="prevOpen" />
+                    <group string="">
+                        <field name="symbol_image" widget="image" class="oe_avatar" string="" />
                     </group>
+                    <group>
+                        <group>
+                            <field name="symbol_id" />
+                            <field name="currency_pair_id" />
+                        </group>
+                        <group>
+                            <field name="tracking_date" />
+                            <field name="lastPrice" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="name" string="Bids/Ask">
+                            <group>
+                                <field name="lowestAsk" />
+                                <field name="highestBid" />
+                                <field name="percentChange" />
+                            </group>
+                        </page>
+                        <page name="name" string="Valume">
+                            <group>
+                                <field name="baseVolume" />
+                                <field name="quoteVolume" />
+                                <field name="isFrozen" />
+                            </group>
+                        </page>
+                        <page name="name" string="High/Low Level">
+                            <group>
+                                <field name="high24hr" />
+                                <field name="low24hr" />
+                            </group>
+                        </page>
+                        <page name="name" string="Percent Change">
+                            <group>
+                                <field name="change" />
+                                <field name="prevClose" />
+                                <field name="prevOpen" />
+                            </group>
+                        </page>
+                        <page name="name" string="History">
+                            <field name="line_ids" />
+                        </page>
+                    </notebook>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" groups="base.group_user" />

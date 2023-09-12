@@ -159,7 +159,7 @@ class crypto_tracking(models.Model):
     highestBid = fields.Float(string="highestBid", digits=(
         12, 8), default="0.0", tracking=True)  # "highestBid": 913303.01,
     percentChange = fields.Float(string="percentChange", digits=(
-        12, 8), default="0.0", tracking=True)  # "percentChange": 0.3,
+        12, 2), default="0.0", tracking=True)  # "percentChange": 0.3,
     baseVolume = fields.Float(string="baseVolume", digits=(
         12, 8), default="0.0", tracking=True)  # "baseVolume": 50.62163798,
     quoteVolume = fields.Float(string="quoteVolume", digits=(
@@ -176,13 +176,21 @@ class crypto_tracking(models.Model):
         12, 8), default="0.0", tracking=True)  # "prevClose": 913303,
     prevOpen = fields.Float(string="prevOpen", digits=(
         12, 8), default="0.0", tracking=True)  # "prevOpen": 910605.01
+    is_status = fields.Selection([
+        ("0", "Start"),
+        ("1", "Wait"),
+        ("2", "Done"),
+    ], string="Status", default="0", tracking=True)
     symbol_image = fields.Image(compute="_value_symbol", store=True)
     exchange_image = fields.Image(compute="_value_symbol", store=True)
     pair_image = fields.Image(compute="_value_symbol", store=True)
 
+    line_ids = fields.One2many("crypto_tracking.history", "crypto_tracking_id", string="History", tracking=True)
+
     def write(self, obj):
         obj["tracking_date"] = fields.Datetime.now()
         self.env['crypto_tracking.history'].create({
+            'crypto_tracking_id': self._origin.id,
             "sync_at": datetime.now(),
             "name": self.symbol_id.name,
             "pair": self.currency_pair_id.name,
@@ -199,6 +207,7 @@ class crypto_tracking(models.Model):
         result = super().create(obj)
         symbol = str(obj[0]["name"]).replace("THB_","").strip()
         self.env['crypto_tracking.history'].create({
+            'crypto_tracking_id': result["id"],
             "sync_at": datetime.now(),
             "name": symbol,
             "pair": "THB",
@@ -216,18 +225,22 @@ class crypto_tracking(models.Model):
             record.exchange_image = record.exchange_id.exchange_logo
             record.pair_image = record.currency_pair_id.currency_logo
 
+    def reloadData(self):
+        print("loading")
+
 
 class history(models.Model):
     _name = 'crypto_tracking.history'
     _description = 'ข้อมูลประวัติราคา'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'avatar.mixin']
 
+    crypto_tracking_id = fields.Many2one('crypto_tracking.crypto_tracking', required=True, tracking=True)
     sync_at = fields.Datetime(
         string="Sync At", default=lambda self: fields.Datetime.now(), tracking=True)
     name = fields.Char(string="Symbol", required=True, tracking=True)
     pair = fields.Char(string="Pair", required=True, tracking=True)
     price = fields.Float(string="Price", digits=(12, 8),required=True, tracking=True)
-    percentChange = fields.Float(string="percentChange", digits=(12, 8), default="0.0", tracking=True)
+    percentChange = fields.Float(string="percentChange", digits=(12, 2), default="0.0", tracking=True)
     baseVolume = fields.Float(string="baseVolume", digits=(12, 8), default="0.0", tracking=True)
     quoteVolume = fields.Float(string="quoteVolume", digits=(12, 8), default="0.0", tracking=True)
 
