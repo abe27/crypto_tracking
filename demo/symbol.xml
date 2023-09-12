@@ -594,7 +594,7 @@
         <record id="symbol_list_luna_classic" model="crypto_tracking.symbol_list">
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_smart_contract" />
-            <field name="name">LUNC</field>
+            <field name="name">LUNA</field>
             <field name="description">Terra Classic</field>
             <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/lunc.png"/>
             <field name="is_withdraw_only">False</field>
