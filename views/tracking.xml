@@ -19,6 +19,9 @@
         <field name="name">crypto_tracking.tree</field>
         <field name="model">crypto_tracking.crypto_tracking</field>
         <field name="arch" type="xml">
+            <header>
+                <button name="reloadDataAll" type="object" class="btn btn-success" string="Reload Data"/>
+            </header>
             <tree position="inside">
                 <field name="name" />
                 <field name="exchange_id" />

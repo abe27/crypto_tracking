@@ -57,7 +57,7 @@
         <menuitem name="Settings" id="crypto_tracking.menu_setting" parent="crypto_tracking.menu_root"/>
         <!-- actions -->
         <menuitem name="ติดตามราคาในท้องตลาด" id="crypto_tracking.menu_tracking_list" parent="crypto_tracking.handle_menu" action="tracking_list_action"/>
-        <menuitem name="ข้อมูลราคาในท้องตลาด" id="crypto_tracking.menu_history" parent="crypto_tracking.handle_menu" action="history_action"/>
+        <!-- <menuitem name="ข้อมูลราคาในท้องตลาด" id="crypto_tracking.menu_history" parent="crypto_tracking.handle_menu" action="history_action"/> -->
         <menuitem name="ข้อมูล Exchange" id="crypto_tracking.menu_exchange_list" parent="crypto_tracking.menu_setting" action="exchange_list_action"/>
         <menuitem name="ข้อมูล Network" id="crypto_tracking.menu_block_chain_list" parent="crypto_tracking.menu_setting" action="block_chain_list_action"/>
         <menuitem name="ข้อมูลประเภทของเหรียญ" id="crypto_tracking.menu_symbol_group_list" parent="crypto_tracking.menu_setting" action="symbol_group_list_action"/>

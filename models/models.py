@@ -245,6 +245,42 @@ class crypto_tracking(models.Model):
                 
             elif self.is_status == "0":
                 self.is_status = "1"
+
+    def __fetchData(self,symbol):
+        #### Get Data
+        response = requests.request( "GET", f"https://api.bitkub.com/api/market/ticker?sym={symbol}")
+        obj = response.json()
+        data = obj[symbol]
+        return data
+
+    def reloadDataAll(self):
+        for r in self:
+            data = self.__fetchData(f"THB_{r.symbol_id.name}")
+            r.tracking_date = fields.Datetime.now()
+            r.lastPrice = data["last"]
+            r.lowestAsk = data["lowestAsk"]
+            r.highestBid = data["highestBid"]
+            r.percentChange = data["percentChange"]
+            r.baseVolume = data["baseVolume"]
+            r.quoteVolume = data["quoteVolume"]
+            r.isFrozen = data["isFrozen"]
+            r.high24hr = data["high24hr"]
+            r.low24hr = data["low24hr"]
+            r.change = data["change"]
+            r.prevClose = data["prevClose"]
+            r.prevOpen = data["prevOpen"]
+            r.is_status = "2"
+            ### Create History
+            self.env['crypto_tracking.history'].create({
+                'crypto_tracking_id': r._origin.id,
+                "sync_at": fields.Datetime.now(),
+                "name": r.symbol_id.name,
+                "pair": "THB",
+                "price": data["last"],
+                "percentChange": data["percentChange"],
+                "baseVolume": data["baseVolume"],
+                "quoteVolume": data["quoteVolume"],
+            })
             
 
 
