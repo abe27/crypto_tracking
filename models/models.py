@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-from datetime import datetime
 import time
+import requests
 
 
 # class crypto_tracking(models.Model):
@@ -190,33 +190,12 @@ class crypto_tracking(models.Model):
 
     def write(self, obj):
         obj["tracking_date"] = fields.Datetime.now()
-        self.env['crypto_tracking.history'].create({
-            'crypto_tracking_id': self._origin.id,
-            "sync_at": datetime.now(),
-            "name": self.symbol_id.name,
-            "pair": self.currency_pair_id.name,
-            "price": self.lastPrice,
-            "percentChange": self.percentChange,
-            "baseVolume": self.baseVolume,
-            "quoteVolume": self.quoteVolume,
-        })
         res = super().write(obj)
         return res
 
     @api.model_create_multi
     def create(self, obj):
         result = super().create(obj)
-        symbol = str(obj[0]["name"]).replace("THB_","").strip()
-        self.env['crypto_tracking.history'].create({
-            'crypto_tracking_id': result["id"],
-            "sync_at": datetime.now(),
-            "name": symbol,
-            "pair": "THB",
-            "price": obj[0]["lastPrice"],
-            "percentChange": obj[0]["percentChange"],
-            "baseVolume": obj[0]["baseVolume"],
-            "quoteVolume": obj[0]["quoteVolume"],
-        })
         return result
 
     @api.depends('symbol_id', 'exchange_id', 'currency_pair_id')
@@ -227,16 +206,45 @@ class crypto_tracking(models.Model):
             record.pair_image = record.currency_pair_id.currency_logo
 
     def reloadData(self):
-        print("loading")
-        time.sleep(3)
-        if self.is_status == "2":
-            self.is_status = "0"
-
-        elif self.is_status == "1":
-            self.is_status = "2"
-            
-        else:
+        if self.is_status == "1":
+            symbol = str(f"{self.currency_pair_id.name}_{self.symbol_id.name}").strip()
+            #### Get Data
+            response = requests.request( "GET", f"https://api.bitkub.com/api/market/ticker?sym={symbol}")
+            obj = response.json()
             self.is_status = "1"
+            data = obj[symbol]
+            self.tracking_date = fields.Datetime.now()
+            self.lastPrice = data["last"]
+            self.lowestAsk = data["lowestAsk"]
+            self.highestBid = data["highestBid"]
+            self.percentChange = data["percentChange"]
+            self.baseVolume = data["baseVolume"]
+            self.quoteVolume = data["quoteVolume"]
+            self.isFrozen = data["isFrozen"]
+            self.high24hr = data["high24hr"]
+            self.low24hr = data["low24hr"]
+            self.change = data["change"]
+            self.prevClose = data["prevClose"]
+            self.prevOpen = data["prevOpen"]
+            self.is_status = "2"
+
+            ### Create History
+            self.env['crypto_tracking.history'].create({
+                'crypto_tracking_id': self._origin.id,
+                "sync_at": fields.Datetime.now(),
+                "name": self.symbol_id.name,
+                "pair": "THB",
+                "price": data["last"],
+                "percentChange": data["percentChange"],
+                "baseVolume": data["baseVolume"],
+                "quoteVolume": data["quoteVolume"],
+            })
+        else:
+            if self.is_status == "2":
+                self.is_status = "0"
+                
+            elif self.is_status == "0":
+                self.is_status = "1"
             
 
 
@@ -254,8 +262,20 @@ class history(models.Model):
     percentChange = fields.Float(string="percentChange", digits=(12, 2), default="0.0", tracking=True)
     baseVolume = fields.Float(string="baseVolume", digits=(12, 8), default="0.0", tracking=True)
     quoteVolume = fields.Float(string="quoteVolume", digits=(12, 8), default="0.0", tracking=True)
+    exchange_id = fields.Many2one('crypto_tracking.exchange_list', compute="_value_exchange", store=True, tracking=True)
 
     def write(self, obj):
         obj["sync_at"] = fields.Datetime.now()
         res = super().write(obj)
         return res
+
+    @api.model_create_multi
+    def create(self, obj):
+        obj[0]["sync_at"] = fields.Datetime.now()
+        result = super().create(obj)
+        return result
+
+    @api.depends('crypto_tracking_id')
+    def _value_exchange(self):
+        for record in self:
+            record.exchange_id = record.crypto_tracking_id.exchange_id

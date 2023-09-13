@@ -7,8 +7,8 @@ from datetime import datetime
 
 odoo_url = "http://localhost:8081"
 odoo_db = "odoo"
-odoo_username = 'admin'
-odoo_password = "admin"
+odoo_username = 'sync'
+odoo_password = "sync"
 # f96bd49d955794f770df528454b505bc1667669b
 
 
@@ -55,15 +55,29 @@ def main():
                     "prevOpen": data["prevOpen"],
                 }
 
+                historyData = {
+                    "name": sym,
+                    "pair": "THB",
+                    "price": data["last"],
+                    "percentChange": data["percentChange"],
+                    "baseVolume": data["baseVolume"],
+                    "quoteVolume": data["quoteVolume"],
+                }
+
                 if len(isDuplicate) > 0:
-                    # insData["tracking_date"] = str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
                     ids = models.execute_kw(odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking','write', [isDuplicate,insData])
                     print(f"{isDuplicate} ==> UPDATE {key}::{ids}")
+                    historyData['crypto_tracking_id'] = isDuplicate[0]
                 else:
                     ids = models.execute_kw(
                         odoo_db, uid, odoo_password, 'crypto_tracking.crypto_tracking', 'create', [insData])
 
                     print(f"{ids} ==> INSERT {key}")
+                    historyData['crypto_tracking_id'] = ids
+
+                ### Create History
+                models.execute_kw(
+                        odoo_db, uid, odoo_password, 'crypto_tracking.history', 'create', [historyData])
 
         except Exception as e:
             print(e)

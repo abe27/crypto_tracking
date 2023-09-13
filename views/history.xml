@@ -6,9 +6,11 @@
         <field name="arch" type="xml">
             <tree string="">
                 <!-- <field name="crypto_tracking_id"/> -->
+                <field name="exchange_id" />
                 <field name="name"/>
                 <field name="pair"/>
                 <field name="price"/>
+                <field name="baseVolume" />
                 <field name="quoteVolume"/>
                 <field name="percentChange"/>
                 <field name="sync_at"/>
@@ -24,9 +26,11 @@
                 <sheet>
                     <group>
                         <field name="crypto_tracking_id"/>
+                        <field name="exchange_id" />
                         <field name="name"/>
                         <field name="pair"/>
                         <field name="price"/>
+                        <field name="baseVolume" />
                         <field name="quoteVolume"/>
                         <field name="percentChange"/>
                         <field name="sync_at"/>
