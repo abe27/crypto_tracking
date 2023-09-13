@@ -47,92 +47,86 @@
                 <header>
                     <button name="reloadData" type="object" class="btn btn-success">
                     Click Here<i class="fa fa-car" />
-                </button>
-                <!-- <div>
-                        <p t-if="is_status === 'sent'">Sent</p>
-                        <p t-elif="is_status === 'canceled'">canceled</p>
-                        <p t-elif="is_status === 'pending">Awaiting Dispatch</p>
-                        <p t-else="">Error</p>
-                    </div> -->
-                <field name="is_status" widget="statusbar" />
-            </header>
-            <sheet>
-                <group string="">
-                    <field name="symbol_image" widget="image" class="oe_avatar" string="" />
-                </group>
-                <group>
-                    <group>
-                        <field name="symbol_id" />
-                        <field name="currency_pair_id" />
+                    </button>
+                    <field name="is_status" widget="statusbar" />
+                </header>
+                <sheet>
+                    <group string="">
+                        <field name="symbol_image" widget="image" class="oe_avatar" string="" />
                     </group>
                     <group>
-                        <field name="tracking_date" />
-                        <field name="lastPrice" />
+                        <group>
+                            <field name="symbol_id" />
+                            <field name="currency_pair_id" />
+                        </group>
+                        <group>
+                            <field name="tracking_date" />
+                            <field name="lastPrice" />
+                        </group>
                     </group>
-                </group>
-                <notebook>
-                    <page name="name" string="Bids/Ask">
-                        <group>
-                            <field name="lowestAsk" />
-                            <field name="highestBid" />
-                            <field name="percentChange" />
-                        </group>
-                    </page>
-                    <page name="name" string="Valume">
-                        <group>
-                            <field name="baseVolume" />
-                            <field name="quoteVolume" />
-                            <field name="isFrozen" />
-                        </group>
-                    </page>
-                    <page name="name" string="High/Low Level">
-                        <group>
-                            <field name="high24hr" />
-                            <field name="low24hr" />
-                        </group>
-                    </page>
-                    <page name="name" string="Percent Change">
-                        <group>
-                            <field name="prevClose" />
-                            <field name="prevOpen" />
-                            <field name="change" string="Diff."/>
-                        </group>
-                    </page>
-                    <page name="name" string="History">
-                        <field name="line_ids" />
-                    </page>
-                </notebook>
-            </sheet>
-            <div class="oe_chatter">
-                <field name="message_follower_ids" groups="base.group_user" />
-                <field name="activity_ids"/>
-                <field name="message_ids" />
-            </div>
-        </form>
-    </field>
-</record>
+                    <notebook>
+                        <page name="name" string="Bids/Ask">
+                            <group>
+                                <field name="lowestAsk" />
+                                <field name="highestBid" />
+                                <field name="percentChange" />
+                            </group>
+                        </page>
+                        <page name="name" string="Valume">
+                            <group>
+                                <field name="baseVolume" />
+                                <field name="quoteVolume" />
+                                <field name="isFrozen" />
+                            </group>
+                        </page>
+                        <page name="name" string="High/Low Level">
+                            <group>
+                                <field name="high24hr" />
+                                <field name="low24hr" />
+                            </group>
+                        </page>
+                        <page name="name" string="Percent Change">
+                            <group>
+                                <field name="prevClose" />
+                                <field name="prevOpen" />
+                                <field name="change" string="Diff."/>
+                            </group>
+                        </page>
+                        <page name="name" string="History">
+                            <field name="line_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
 
-<record id="crypto_tracking_calendar" model="ir.ui.view">
-    <field name="name">crypto_tracking.calendar</field>
-    <field name="model">crypto_tracking.crypto_tracking</field>
-    <field name="arch" type="xml">
-        <calendar string="" date_start="tracking_date" mode="month">
-            <field name="name" />
-        </calendar>
-    </field>
-</record>
+    <record id="crypto_tracking_calendar" model="ir.ui.view">
+        <field name="name">crypto_tracking.calendar</field>
+        <field name="model">crypto_tracking.crypto_tracking</field>
+        <field name="arch" type="xml">
+            <calendar string="" date_start="tracking_date" mode="month">
+                <field name="name" />
+            </calendar>
+        </field>
+    </record>
 
-<record id="crypto_tracking_view_kanban" model="ir.ui.view">
-    <field name="name">crypto_tracking.view.kanban</field>
-    <field name="model">crypto_tracking.crypto_tracking</field>
-    <field name="arch" type="xml">
-        <kanban>
-            <templates>
-                <t t-name="kanban-box">
-                    <div class=""></div>
-                </t>
-            </templates>
-        </kanban>
-    </field>
-</record>
+    <record id="crypto_tracking_view_kanban" model="ir.ui.view">
+        <field name="name">crypto_tracking.view.kanban</field>
+        <field name="model">crypto_tracking.crypto_tracking</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class=""></div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 </odoo>
