@@ -1005,9 +1005,29 @@
             <!-- field ที่เป็น Reference -->
             <field name="symbol_group_id" ref="symbol_group_defi" />
             <field name="name">FLR</field>
-            <field name="description">Flare</field>
+            <field name="description">Flare Network</field>
             <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/flr.png"/>
-            <field name="is_withdraw_only">True</field>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="symbol_list_gmx" model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="symbol_group_defi" />
+            <field name="name">GMX</field>
+            <field name="description">Gambit Exchange</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/gmx.png"/>
+            <field name="is_withdraw_only">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="symbol_list_uma" model="crypto_tracking.symbol_list">
+            <!-- field ที่เป็น Reference -->
+            <field name="symbol_group_id" ref="symbol_group_defi" />
+            <field name="name">UMA</field>
+            <field name="description">Universal Market Access</field>
+            <field name="symbol_logo" type="base64" file="crypto_tracking/static/images/crypto/uma.png"/>
+            <field name="is_withdraw_only">False</field>
             <field name="is_active">True</field>
         </record>
     </data>

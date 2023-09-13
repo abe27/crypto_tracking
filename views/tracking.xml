@@ -19,10 +19,10 @@
         <field name="name">crypto_tracking.tree</field>
         <field name="model">crypto_tracking.crypto_tracking</field>
         <field name="arch" type="xml">
-            <header>
+            <!-- <header>
                 <button name="reloadDataAll" type="object" class="bin bin-primary" string="Reload Data"/>
-            </header>
-            <tree position="inside">
+            </header> -->
+            <tree>
                 <field name="name" />
                 <field name="exchange_id" />
                 <field name="symbol_id" />
@@ -33,11 +33,7 @@
                 <field name="percentChange" />
                 <field name="baseVolume" />
                 <field name="quoteVolume" />
-                <!-- <field name="isFrozen" />
-                <field name="high24hr" />
-                <field name="low24hr" /> -->
                 <field name="change" />
-                <!-- <field name="prevClose" /> -->
                 <field name="is_status" widget="badge"/>
             </tree>
         </field>
