@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 from datetime import datetime
+import time
 
 
 # class crypto_tracking(models.Model):
@@ -227,6 +228,16 @@ class crypto_tracking(models.Model):
 
     def reloadData(self):
         print("loading")
+        time.sleep(3)
+        if self.is_status == "2":
+            self.is_status = "0"
+
+        elif self.is_status == "1":
+            self.is_status = "2"
+            
+        else:
+            self.is_status = "1"
+            
 
 
 class history(models.Model):
