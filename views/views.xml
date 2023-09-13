@@ -43,11 +43,11 @@
             <field name="view_mode">tree,form,calendar,kanban</field>
         </record>
 
-        <record model="ir.actions.act_window" id="history_action">
+        <!-- <record model="ir.actions.act_window" id="history_action">
             <field name="name">ข้อมูลราคาในท้องตลาด</field>
             <field name="res_model">crypto_tracking.history</field>
             <field name="view_mode">tree,form</field>
-        </record>
+        </record> -->
 
 
         <!-- Top menu item -->

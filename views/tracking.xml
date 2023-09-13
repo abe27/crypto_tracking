@@ -30,11 +30,12 @@
                 <field name="percentChange" />
                 <field name="baseVolume" />
                 <field name="quoteVolume" />
-                <field name="isFrozen" />
+                <!-- <field name="isFrozen" />
                 <field name="high24hr" />
-                <field name="low24hr" />
+                <field name="low24hr" /> -->
                 <field name="change" />
-                <field name="prevClose" />
+                <!-- <field name="prevClose" /> -->
+                <field name="is_status" widget="badge"/>
             </tree>
         </field>
     </record>
@@ -46,7 +47,7 @@
             <form string="">
                 <header>
                     <button name="reloadData" type="object" class="btn btn-success">
-                    Click Here<i class="fa fa-car" />
+                    Reload Data <i class="fa fa-refresh" />
                     </button>
                     <field name="is_status" widget="statusbar" />
                 </header>
